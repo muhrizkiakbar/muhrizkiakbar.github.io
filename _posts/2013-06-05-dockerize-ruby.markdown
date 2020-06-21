@@ -3,7 +3,8 @@ title: Dockerize Ruby
 layout: post
 date: '2013-06-05 17:06:25 +0000'
 categories:
-- self
+- docker
+- ruby
 ---
 
 Docker ? Yup docker is tech stack that i usually use for development. why? cause docker is good for managing container, light technology and versioning tech.
