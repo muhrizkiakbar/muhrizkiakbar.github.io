@@ -47,7 +47,6 @@ services:
     ports:
       - "3000:3000"  ##### port ini saya gunakan buat serve rails nyaa
       - "7658:7658"  ##### dan port ini saya gunakan untuk solargraph, lumayan vim saya ada IDE nya
-		# nah ini command"rm -f tmp/pids/server.pid && rm -f /usr/local/var/postgres/postmaster.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - ~/Project:/Project     # yang sebelah kiri adalah posisi parent folder project kita dan sebelah kanan adalah posisi directory yang di vm nya docker
       - ~/.ssh:/root/.ssh      ######## biar bisa dapet ssh key di pc kita ke docker, biar deploy nya enak
