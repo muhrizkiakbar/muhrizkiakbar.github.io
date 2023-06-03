@@ -1,9 +1,0 @@
-name: Hello Devs!
-url: ""
-description: Only sharing about my experience...
-
-permalink: /:year/:month/:day/:title/
-paginate: 10
-
-gems: [jekyll-paginate]
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
