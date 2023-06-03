@@ -1070,6 +1070,10 @@ body {
   .sm\:mt-5 {
     margin-top: 1.25rem;
   }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
 }
 
 @media (min-width: 768px) {
