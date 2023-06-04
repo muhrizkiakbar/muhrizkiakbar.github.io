@@ -8,7 +8,7 @@ delete colors['coolGray'];
 delete colors['blueGray'];
 
 module.exports = {
-  content: ["index.html"],
+  content: ["index.html", "./pages/*.html"],
   theme: {
     container: {
       center: true,
