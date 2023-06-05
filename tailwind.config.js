@@ -8,6 +8,7 @@ delete colors['coolGray'];
 delete colors['blueGray'];
 
 module.exports = {
+  darkMode: 'class',
   content: ["index.html", "./pages/*.html"],
   theme: {
     container: {
