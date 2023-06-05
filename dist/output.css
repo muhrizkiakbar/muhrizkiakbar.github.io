@@ -1117,14 +1117,13 @@ body {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:bg-opacity-0) {
+  --tw-bg-opacity: 0;
+}
+
 :is(.dark .dark\:text-primary) {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
-}
-
-:is(.dark .dark\:text-slate-100) {
-  --tw-text-opacity: 1;
-  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:text-slate-400) {
