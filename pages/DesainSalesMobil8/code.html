@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>LuxeDrive - Temukan Mobil Impian Anda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1e",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed": "#002113",
+                        "on-secondary-fixed-variant": "#005236",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-primary-fixed": "#00174b",
+                        "surface-dim": "#d8dadc",
+                        "secondary": "#006c49",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-container": "#00714d",
+                        "secondary-container": "#6cf8bb",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface-variant": "#434655",
+                        "primary": "#004ac6",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "outline": "#737686",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-tint": "#0053db",
+                        "outline-variant": "#c3c6d7",
+                        "on-primary-container": "#eeefff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "inverse-primary": "#b4c5ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "tertiary-container": "#bc4800",
+                        "surface-variant": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary": "#943700",
+                        "surface-bright": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "stack-lg": "24px",
+                        "section-gap": "40px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "price-display": ["18px", {"lineHeight": "24px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm px-container-margin py-stack-md flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed shadow-sm">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional male user with a clean-cut look, smiling warmly. The lighting is soft and natural, emphasizing a trustworthy and friendly persona suitable for a luxury automotive app profile. The background is a blurred office interior with soft blue and white tones to match the LuxeDrive brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_vLUA9XrFf7f79OzH7xvz6P3icYxX-uNLoIhYu0gMyPcYrk8LClfUhdv8y9wbNU-s9KvealdBpNjNzK7W_Bos-Ppy20_4d_9VA9A7ESn9Prl-DwUlGJ4dWxYmQCZ5YZSPQ8pXQoLQLXL3GBWTByCiylF1ewfEwtC1iNPQvM05OqsGRc_ef_gCwCkAeY1kKMI4UqMQ0c0aJg1L8pyMVN-afq4bOCdRt-4gJZghxFSCKJ0J5zb6g8vXTTJ1WXQzkdAOXM0_Pw6KRDk"/>
+</div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Your location</span>
+<span class="text-label-lg font-label-lg text-on-surface">Jakarta, Indonesia</span>
+</div>
+</div>
+<div class="text-headline-lg-mobile font-headline-lg-mobile font-bold text-primary">LuxeDrive</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="pt-20 pb-24 min-h-screen">
+<!-- Hero Section -->
+<section class="px-container-margin mb-section-gap mt-stack-lg">
+<div class="relative w-full h-[460px] rounded-[32px] overflow-hidden shadow-lg group">
+<img alt="Friendly driver" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF5k3P7viOMlCGr0H_sNv8p2KgUlhjG_ilJRk42jVdP06nFAvjUhoLJKCPgeGFZ228K0wo_6Bbo8KYHTMFbdxbI2Ed5pmzHfFUkq2gF-cNyrJMK0Xn3tW-lHgiBTZyxiffWsHZzHAAClMstY_Sh8mcuOxsONdGLNmZJnWFkUKbOvMj29_kqKUOiBIKWcr4fpwXOi54set9IBKE3Q_R5wJr1Gzvy45M64dM5YAazBgiveT0BhedmZmU9bHBqi1LN50XqSUYPpMqFhw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h1 class="text-headline-xl font-headline-xl text-white mb-stack-sm leading-tight">
+                        Temukan Mobil Impian<br/>Anda dengan Mudah
+                    </h1>
+<p class="text-body-lg font-body-lg text-white/80 mb-stack-lg max-w-xs">
+                        Pilihan mobil mewah terbaik dengan penawaran transparan dan layanan premium.
+                    </p>
+<div class="flex gap-stack-md">
+<button class="bg-primary-container text-white px-8 py-4 rounded-full font-label-lg shadow-lg hover:scale-95 transition-all">
+                            Mulai Cari
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Search Bar -->
+<section class="px-container-margin -mt-12 relative z-10 mb-section-gap">
+<div class="bg-white p-4 rounded-3xl shadow-xl flex items-center gap-3 border border-outline-variant/30">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="flex-1 border-none focus:ring-0 text-body-lg font-body-lg placeholder:text-outline/60 bg-transparent" placeholder="Cari merk, model, atau kata kunci..." type="text"/>
+<button class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</section>
+<!-- Shop by Budget Section -->
+<section class="mb-section-gap">
+<div class="px-container-margin flex justify-between items-center mb-stack-md">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Shop by Budget</h2>
+<a class="text-primary font-label-lg" href="#">Lihat Semua</a>
+</div>
+<div class="flex overflow-x-auto gap-stack-md px-container-margin hide-scrollbar pb-2">
+<button class="whitespace-nowrap px-6 py-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all flex flex-col items-start gap-1">
+<span class="text-label-sm text-on-surface-variant">Under</span>
+<span class="text-headline-md text-primary">Rp 200jt</span>
+</button>
+<button class="whitespace-nowrap px-6 py-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all flex flex-col items-start gap-1">
+<span class="text-label-sm text-on-surface-variant">Range</span>
+<span class="text-headline-md text-primary">Rp 200jt - 500jt</span>
+</button>
+<button class="whitespace-nowrap px-6 py-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all flex flex-col items-start gap-1">
+<span class="text-label-sm text-on-surface-variant">Luxury</span>
+<span class="text-headline-md text-primary">Over Rp 500jt</span>
+</button>
+</div>
+</section>
+<!-- Featured Collections (Bento) -->
+<section class="px-container-margin mb-section-gap">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-stack-md">Koleksi Pilihan</h2>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="col-span-1 h-64 bg-secondary-container rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container">electric_car</span>
+<div class="relative z-10">
+<h3 class="text-headline-md text-on-secondary-container">Kendaraan Listrik</h3>
+<p class="text-label-sm text-on-secondary-fixed-variant">Ramah Lingkungan</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px]">bolt</span>
+</div>
+</div>
+<div class="col-span-1 h-64 bg-primary-fixed rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group">
+<span class="material-symbols-outlined text-4xl text-primary">diamond</span>
+<div class="relative z-10">
+<h3 class="text-headline-md text-on-primary-fixed">Koleksi Mewah</h3>
+<p class="text-label-sm text-on-primary-fixed-variant">Prestise Tinggi</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px]">workspace_premium</span>
+</div>
+</div>
+<div class="col-span-2 h-48 bg-tertiary-fixed rounded-3xl p-6 flex items-center justify-between relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="text-headline-md text-on-tertiary-fixed">Penawaran Terbatas</h3>
+<p class="text-label-sm text-on-tertiary-fixed-variant">Diskon khusus bulan ini hingga Rp 50jt</p>
+<button class="mt-4 bg-tertiary text-white px-6 py-2 rounded-full font-label-lg">Cek Sekarang</button>
+</div>
+<div class="absolute right-0 bottom-0 top-0 w-1/2 overflow-hidden">
+<img alt="Limited Offer Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A sleek, modern white luxury sports car shown from a three-quarter side angle. The car is parked in a minimalist, bright white showroom with soft professional studio lighting. The aesthetic is clean and high-end, focusing on the car's refined aerodynamic lines and premium finish, perfect for a high-value promotional section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD28x1BTUF5OvBvGMWvfSGk1QE8KZh1GQRGTd6dd_fUUvIOAilPkkbkSS_sOcvFcZWbc76OJ74RoQUU7wQjDjlOcsXhbVHqRj0WARumFVTFFAvKCkwoHgBU-Y_jwIgfRtb4bclY0iYFHmMXLTzk5WZXjqtkYlsux7hAiCLeaHMwm1_SkNqBO3tl3qjtlKnLjhaUKFI5ZFO2AlixfJe906zTHGgEKSyYsX708m2inkLtBt8JwezPxNfK2AyW8-UVV6o_CrFws9gW0Yc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Cars -->
+<section class="px-container-margin mb-section-gap">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Mobil Terpopuler</h2>
+<a class="text-primary font-label-lg" href="#">See all</a>
+</div>
+<div class="grid grid-cols-1 gap-stack-lg">
+<!-- Car Card 1 -->
+<div class="bg-white rounded-[24px] p-4 shadow-sm border border-outline-variant/10 group active:scale-[0.98] transition-all">
+<div class="relative aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-low mb-4">
+<img alt="BMW 3 Series" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A side view of a metallic blue BMW 3 Series sedan cruising on a coastal highway at golden hour. The warm sunlight glints off the sleek bodywork, creating high-contrast highlights. The setting is luxurious and serene, with the ocean in the background and soft, premium lighting that evokes a sense of high-performance elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS0EIxW0U_HqwEr5cKaNlIJHr8qma6tDEWg1aPjhIqkUKIlFDI6Dylo4wnRM9l0RN7onB_317MLX7RfViZjYoQsZEizxXTP7U5KR_646r5TsJxrAwEqMJCTwwmOkdwUSrOZdZUhNVgkAx7BLxpcReaM_ge-u2WPJHtugYAIoBsI8aH0RllFBX-jRnAAkO1J4E56hPs-AMY8zt2my014pq3nEbszsyPFzaY0-skFpKlIIGqv3YXzhRmx-hIMty9z2WStwlb-_WvTmA"/>
+<div class="absolute top-3 left-3 bg-secondary text-white px-3 py-1 rounded-full text-label-sm">Sale</div>
+<button class="absolute top-3 right-3 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-error shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-headline-md text-on-surface">BMW 3 Series 2022</h3>
+<span class="text-price-display text-primary">Rp 845jt</span>
+</div>
+<div class="flex gap-stack-md text-label-sm text-on-surface-variant mb-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">speed</span> 12.500 km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">settings</span> Automatic</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_gas_station</span> Petrol</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Jakarta Selatan
+                        </div>
+</div>
+</div>
+<!-- Car Card 2 -->
+<div class="bg-white rounded-[24px] p-4 shadow-sm border border-outline-variant/10 group active:scale-[0.98] transition-all">
+<div class="relative aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-low mb-4">
+<img alt="Tesla Model 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A futuristic white Tesla Model 3 parked in a contemporary driveway during the late afternoon. The lighting is soft and ambient, casting gentle shadows that define the car's minimalist design. The background includes a modern architectural house with large windows, reinforcing the lifestyle of a tech-savvy, eco-conscious luxury car owner." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqgBITDRRORghSoHQVHI8jVmpkQT5KSS-boZe8AeZ5xeDpQAr_g8vR_fEJlAHssrzBhRyiNQ-GaqWOXzgkNoDMJUNOc0MnTONVsNDeaePZElVluD0Nnel754FO-VmmGabXWEMzq3HDDClHg259rrfjAcQht1irGn8O64-G18es2iuKANVannkLQ6beV7AqSfiZEkJ3M3qcFw1Ou1Npgd7yv76iJPg7OfREgjTdFDJH82ONkVRQtWDuYkXblGT8q9hlIpesx3ZBhes"/>
+<button class="absolute top-3 right-3 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-headline-md text-on-surface">Tesla Model 3</h3>
+<span class="text-price-display text-primary">Rp 1.15M</span>
+</div>
+<div class="flex gap-stack-md text-label-sm text-on-surface-variant mb-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">speed</span> 5.200 km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> Electric</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">auto_awesome</span> Autopilot</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Tangerang
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-surface shadow-[0_-4px_15px_0_rgba(0,0,0,0.04)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-transform duration-200 scale-90" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="text-label-sm font-label-sm">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-sm font-label-sm">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-label-sm font-label-sm">Sell</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm font-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.add('bg-white/95');
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.remove('bg-white/95');
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // Hover effect for filter chips
+        const chips = document.querySelectorAll('.hide-scrollbar button');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('bg-primary-container', 'text-white'));
+                chips.forEach(c => c.querySelector('span:last-child').classList.add('text-primary'));
+                chip.classList.add('bg-primary-container');
+                chip.querySelector('span:first-child').classList.remove('text-on-surface-variant');
+                chip.querySelector('span:first-child').classList.add('text-white/80');
+                chip.querySelector('span:last-child').classList.remove('text-primary');
+                chip.querySelector('span:last-child').classList.add('text-white');
+            });
+        });
+    </script>
+</body></html>
