@@ -1,0 +1,538 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AutoVerse Sales Hub | Konsultan Mobil Profesional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#dae2fd",
+                    "on-tertiary-fixed": "#370e00",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#b7c4ff",
+                    "on-primary-container": "#dfe3ff",
+                    "on-surface": "#191c1e",
+                    "tertiary-fixed-dim": "#ffb59a",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ffded2",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#8c2f00",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "on-primary-fixed": "#001452",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-tint": "#004ced",
+                    "secondary": "#565e74",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c3c5d9",
+                    "on-surface-variant": "#434656",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#ffdbce",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e0e3e5",
+                    "primary-container": "#0052ff",
+                    "primary-fixed": "#dde1ff",
+                    "inverse-surface": "#2d3133",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "secondary-container": "#dae2fd",
+                    "surface": "#f7f9fb",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-secondary-container": "#5c647a",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary-fixed-variant": "#802a00",
+                    "tertiary-container": "#b43f00",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "outline": "#737688"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-x": "32px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-bold": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "button": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 62, 199, 0.08); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-x py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">AutoVerse Sales Hub</div>
+<div class="hidden md:flex gap-8 items-center font-body-md text-body-md font-bold">
+<a class="text-primary border-b-2 border-primary pb-1" href="#inventory">Katalog</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#features">Keunggulan</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#simulation">Simulasi</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#reviews">Testimoni</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#faq">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary hidden md:block">directions_car</span>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-button hover:scale-95 transition-transform active:scale-90" href="https://wa.me/628123456789">WhatsApp Me</a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-margin-x py-stack-lg max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-md">
+<span class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full font-label-bold text-label-bold uppercase tracking-widest">Premium Concierge</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">Miliki Mobil Impian Tanpa Ribet.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-lg">Halo, saya <strong>Budi Santoso</strong>. Sebagai konsultan penjualan profesional Anda, saya akan memandu setiap langkah mulai dari pemilihan unit hingga pengiriman ke garasi rumah Anda.</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-button text-lg flex items-center gap-2 hover:bg-primary-container transition-all shadow-lg" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined">chat</span> Hubungi Saya via WhatsApp
+                    </a>
+<a class="border border-outline text-on-surface px-8 py-4 rounded-xl font-button text-lg flex items-center gap-2 hover:bg-surface-container transition-all" href="#inventory">
+                        Lihat Katalog Mobil
+                    </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 rounded-[2rem] blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<img class="relative w-full h-[500px] object-cover rounded-[2rem] shadow-2xl" alt="Pak Budi with a luxury car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbSKlhL2CYDSIPueZ9336KjLRYU5gdIqUgGKjUSkJ6Q7wgIVdZEPuOqC-WKS1MlW2RTBYNERhhqjReT0DcDrgTfrSJmj5aG3LEOZS6TyUsRznkd1pHI6HI_pkr3NGvgLtd4KvBTeevJiczKSNkaRhadvU_0Yh_0zL-eF1FJ_1NcKidfP2Gc_oUfQR7jgnlYjhW2RJ5USMJlzDRCcAJuKSNwkEJB4k0PzJGj6JBt-LEp-pwH-8QIvVL3QWov4q44lvQo1QLpnr3UJM">
+</div>
+</section>
+<!-- Exploration Hub (Integrated Categories) -->
+<section class="py-section-gap scroll-mt-20" id="inventory">
+<div class="max-w-container-max mx-auto px-margin-x">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg mb-4">Eksplorasi Koleksi Kami</h2>
+<p class="text-secondary text-body-lg max-w-2xl mx-auto">Temukan kendaraan yang sempurna untuk gaya hidup Anda melalui kurasi kategori terbaik kami.</p>
+</div>
+<!-- Filter / Tab Navigation -->
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-6 mb-stack-lg border-b border-outline-variant">
+<button class="tab-btn active whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-primary bg-primary text-on-primary" data-target="suv-urban" onclick="showCategory('suv-urban')">SUV Urban</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="suv-adventure" onclick="showCategory('suv-adventure')">SUV Adventure</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="mpv-family" onclick="showCategory('mpv-family')">MPV Family</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="mpv-big-family" onclick="showCategory('mpv-big-family')">MPV Big Family</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="sedan-executive" onclick="showCategory('sedan-executive')">Sedan Executive</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="hatchback-city" onclick="showCategory('hatchback-city')">Hatchback City</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="ev-future" onclick="showCategory('ev-future')">EV Future</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="hybrid-efficient" onclick="showCategory('hybrid-efficient')">Hybrid Efficient</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="compact-city" onclick="showCategory('compact-city')">Compact City</button>
+<button class="tab-btn whitespace-nowrap px-6 py-3 rounded-full font-label-bold text-label-bold transition-all border-2 border-outline-variant text-secondary hover:border-primary hover:text-primary" data-target="luxury-class" onclick="showCategory('luxury-class')">Luxury Class</button>
+</div>
+<!-- Category Content Container -->
+<div class="min-h-[600px]" id="category-container">
+<!-- SUV Urban Content (Grid) -->
+<div class="tab-content active" id="suv-urban">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface rounded-xl overflow-hidden hover-lift border border-outline-variant">
+<div class="h-64 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6MnpiFbsaGKClwBHoOO2E1Sur43tdihuBEUh9qIVyfvIYN1gBYnKhXzfU4kSm4VhTKbXxefmcMPS1aEvaovFEACMOc9dbxuTUVOmPXUsleMT5PgiEsXuzcRfbNhfDE2tHzusKVVK674uMUZLfwnzKW8eJubhHQJ4pY7yZ9Xnh5k_u_hKcvSAg1vGFhx86x4W9HZIPrmthisPZDA1vkiucEOfEGe_hKZvkEEyoU4xeKIQ6y2YnWsIMpJSPq8ClspjSQKPzgjxZHf4">
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded text-label-bold">READY STOCK</div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md text-xl mb-2">Urban Voyager X1</h3>
+<div class="flex justify-between items-center"><span class="text-primary font-bold">Mulai Rp 350 Juta</span><span class="text-secondary text-sm">Cicilan 4jt-an</span></div>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden hover-lift border border-outline-variant">
+<div class="h-64 bg-surface-container-high relative"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEJOPHvk6bRC89woD3SVHhJzlC30lg3sckG3FgLGMRmljiMlKbUB9LyoNdWCMHJ9jG-K2E6LurXFjb1QuYaf5L_MNdcoYzKboiIs7WXlEN3b4PGPvw5MqXAAH0mOrQ5TednBph20R08VWOCDxQb_jUe4VjpI3wlmFnsCR4-isxX0mah6jmLHYdKv02zLnn9uVkBeNs04Qruk6mKkXUnUIjECuw8UFM2wxk7Zj5Ankm2pnreLHViet69CiIcGUSpdO3ZpKiWtT3rHY"></div>
+<div class="p-stack-md"><h3 class="font-headline-md text-xl mb-2">City Runner Plus</h3><div class="flex justify-between items-center"><span class="text-primary font-bold">Mulai Rp 320 Juta</span></div></div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden hover-lift border border-outline-variant">
+<div class="h-64 bg-surface-container-high relative"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3SvZwLMbC6EoBaDJ2bqZH_uGdv8XtmGCw7qCFpsg8XPj24YTTr0rLJ2B6XPscLU1caJ8A3Cnjv_jiwJCkVpe7ZUK0zf-xUnfG4c2ILCWfgVV9WNXUInbZLxUpUegF_2nAHk3DBy1lrKL9Yvq2vyh5lY2eyGm-e4ppbGQsYu0GLmeqi7GWxMi-T-HFavsfXk_81EqPdyyU3hW0BO3E7duveXF_fIU_j-W8hLcmeTur2wezEcV8PxwTNYnCBWHsbHl5V95p4XdG3cQ"></div>
+<div class="p-stack-md"><h3 class="font-headline-md text-xl mb-2">Metro Star GL</h3><div class="flex justify-between items-center"><span class="text-primary font-bold">Mulai Rp 380 Juta</span></div></div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden hover-lift border border-outline-variant">
+<div class="h-64 bg-surface-container-high relative"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ0EbZkX0JUycnvek55mm_c2NdqAN9EtYJjAg1Ql8Oas-uW3mRxG-gJWHqFWSfJpNTjDrVfTdWtLr6tmH6rgqnFIFLTUYHs3wrNCHh88GJ_vk6ajcndBN0-Yr5gLTqbtjLVJe6cnnKahiMrROMZ3dtliCizGJfeunu0f9cSYmP6nbw-tgktrVqXn9JyEWc400sTx46h819_v2b7s7B1TzOCgsqmeNfx23r3EjfH4-8Riwot78PFX6jVu4NlRcA_sDbqMQHA38qliU"></div>
+<div class="p-stack-md"><h3 class="font-headline-md text-xl mb-2">Skyline GT</h3><div class="flex justify-between items-center"><span class="text-primary font-bold">Mulai Rp 410 Juta</span></div></div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden hover-lift border border-outline-variant">
+<div class="h-64 bg-surface-container-high relative"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXbE0GLhu7PnFORBp87YZMutoBZvJlHvHgOFtMTHwviYq1z5CYAhpzax3_NN7ea7qMiYIDkPrvIxEzLIlD5sg82K0gvwy2f7LgXnIVlohHg5QsyZsHDfEU6TEsZ9qxQnzYUN8m0q91OtmazAjYDBslM9U4N-ZRsYM7VPN96vJBT9Ezf30fnGfRkqkuyRpyYRqeb0dPMzaCxVn-fYxW0lmUNnr-BqikM_pIMvIEsHL0bhymNuQ6pDm9t7n9nBFgT3uLOhvfYvXwYa8"></div>
+<div class="p-stack-md"><h3 class="font-headline-md text-xl mb-2">Phantom City</h3><div class="flex justify-between items-center"><span class="text-primary font-bold">Mulai Rp 395 Juta</span></div></div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden hover-lift border border-outline-variant">
+<div class="h-64 bg-surface-container-high relative"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4xKLfbnbjWNdDTUD_SzSQUSXnZBnT144CrTGvq65ECKlYQLAT3cRpyf0FvZ1R8e3LhGXoGRBcQnJ62NSunoPer6ZrZ8028p2mawnXRhdCqIFN-noKZ1VGgc_v74sC4Fo7SvZY1qzYZ_AUK6i6pj3cgZf2HG-6P8sLIiQTpT0XMHXeoR2XbzPad9HWOYBKzH4WojkRDL4moMkWUqVm0W7BPeLL3WjeROBvlbDjJmz8OyTflaWYyx9i-toz9dwhWaP2oUhegZNFXxs"></div>
+<div class="p-stack-md"><h3 class="font-headline-md text-xl mb-2">Executive SUV X</h3><div class="flex justify-between items-center"><span class="text-primary font-bold">Mulai Rp 450 Juta</span></div></div>
+</div>
+</div>
+</div>
+<!-- SUV Adventure Content (Carousel Style) -->
+<div class="tab-content" id="suv-adventure">
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar snap-x pb-8">
+<div class="flex-none w-[350px] md:w-[450px] snap-center">
+<img class="w-full h-96 object-cover rounded-2xl shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDZByChNe0kJjOUa86soZTlXhYw_vZ9_8oCsd5piH8m8hkJoXrr2Nd9qySq6RS6l3w2wud9arYf5fS0a4Tr5WnjUDnrnBxa4uN_IMTZoBtPBOBcXyDcQAL3hYv5zKrMApX4xD3ETY0KWqunqdJF24jFRbCtr8dt0QmiRSsyruoUdJpLRzExhuX-oxSNszhIU0H5DPVI_w02wWzmKl01psNRuHV8W_7ryMcWCVsvlgOZ7C9dacM2JzIa15zl3a_GFrzJmrlvS4bJg8">
+<div class="mt-4"><h4 class="font-bold text-xl">Wilderness 4x4</h4><p class="text-secondary">Power: 204 HP | Torque: 500 Nm</p></div>
+</div>
+<div class="flex-none w-[350px] md:w-[450px] snap-center">
+<img class="w-full h-96 object-cover rounded-2xl shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWHLsRr_Rw3LUhoBSV75RPzBuDvTOsVNRELV8AfSbzzzW1SHwIROwAKa2pZNYAnKvvhsCMV4xMmDqBLybYOQNX5IEB-gB6mU1JFHQT12JWuh_Qjsx-WthsxV_OiwkTkHG4sgyTTRT-NFxb-PAVgbwZ2SUAT7JgLLCfAwfMaklv3ngUwRfv4sUwr0Ooaj5V9NtB0AP9m12OPRcQ-jLCNsqbUJcUDMk2dtp4UERqKunyJyK9dx9PSET97iDAz1t2hMXRybdGSyaA6b4">
+<div class="mt-4"><h4 class="font-bold text-xl">Summit Peak Edition</h4><p class="text-secondary">Off-road specialized suspension</p></div>
+</div>
+<div class="flex-none w-[350px] md:w-[450px] snap-center">
+<img class="w-full h-96 object-cover rounded-2xl shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyiMT7sdkgkoIZn3JvrO7gAXSnkFPIJRAGoBtrZs2N9xEHySnfPFk_i6f3kdRXGv8_9uflCWmW73RdqWysnK_8Kawf80VTAQdWJhelzdqf4hWCeNINs6y3Tb0yx9w18SNmabtD0XRBRcebyqfBg2WkptCQu2IttyiBsIYquIZoMsaNDT3MLrgY_0t_BXWFU3n8b50eaLNGqqhyepoTV0C4OTuCeK826lX5BbZwnbQx-PnCeiPTK3PggS41laY3bIhOegDIMC_jVXg">
+<div class="mt-4"><h4 class="font-bold text-xl">Overlander Pro</h4><p class="text-secondary">Camping Ready Setup</p></div>
+</div>
+</div>
+</div>
+<!-- MPV Family Content (Bento Box) -->
+<div class="tab-content" id="mpv-family">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[500px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container relative rounded-3xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3cc1D1DzjZxar_SmFOex6xVHwqH3hWJ16Avr_GwB7axmAhoXBPefzd6BkEhK4pDh5KNRdbT-j1Q67Bd52MzbtMaaVWEbsi-BXW-kzACwIE1pSPHFqViHxf1K8mA1kL-XAH80Gj8x_BhgoiLF0qLdRCUhC15qM8zTouLJVJiglqry8vROffhZ7YKbPkXFwaWOopVsSAU0wmS9l_Eb-Y94bg_25W8EefmpRFT_A_FwDOXZm1oRq1KdbZy4RvdAXhIjRfQjBhq-27jY">
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent text-white">
+<h3 class="text-2xl font-bold">Family Star XL</h3>
+<p class="">7-Seater dengan kenyamanan kelas satu.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-high rounded-3xl overflow-hidden flex flex-col md:flex-row items-center">
+<div class="p-8 flex-1">
+<h3 class="text-xl font-bold">Space Master</h3>
+<p class="text-secondary">Bagasi terluas di kelasnya.</p>
+</div>
+<div class="w-full md:w-1/2 h-full"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCefweA6q10SGQ11VZSUWy5V8i8AqvdDFMi6TKKyuXA8pNWZxlxHUFdwkwVw01b-CEIRbj4vds1KLFtJzepri7wDqoyxFq-ip0AaG_9QIKY7vMMUCiNl2-NjK_wFnX87RGSSHT_rpM0_b7m0DC8JUbIPh1moFUabAmNQO1zrPlYNFcAS4nQr7GamSgWYWFdcjyAVGWhz7MIgXj9Hd2DCHIJW-o7rHFpOsCRBVrlzddsuXnAibqLS8hARLRhZbuwwwRdKEK94ff8pM"></div>
+</div>
+<div class="bg-primary rounded-3xl p-8 text-on-primary flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">family_restroom</span>
+<div><h3 class="font-bold text-lg">Safety Priority</h3><p class="text-sm opacity-80">6 Airbags &amp; ADAS System</p></div>
+</div>
+<div class="bg-secondary-container rounded-3xl overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW4ZWZPkffcby1v5iERuKyiLP4Enj6A9WAEFDriiT73hQR5UFbfOanzMRObNydyXJaiY4fJk4YnVGhUnS_Jf0Fiol7HC6-AJHBy0pwJo56PrqjHYDS8ajS47aoKV4oLnTUm9gizTHnp9bSyHQk8CzwoCmvV6yoLojYa_XXuWb43sX4PMoQzC9FpHRiyk-zR3iiakJ7rXqVmJVtm99qzKtanp4fcMXXZnAEqJcCx3JSj8K8N4-xk4HFZvPk9HGXTbbTB8IzF6Qi91g">
+</div>
+</div>
+</div>
+<!-- MPV Big Family Content (Zig-zag) -->
+<div class="tab-content" id="mpv-big-family">
+<div class="space-y-stack-lg">
+<div class="flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="w-full md:w-1/2"><img class="w-full aspect-video object-cover rounded-3xl shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdJcaxALvj3yGzyXj1bPKqYV9kHiwzM9YbIylCoqkktOprdeBEOllBFCmarVM4GY2KH4jDn0nToFGXRwmy7CC8CEz_OEEUjgaF4JDQL_iJqPMTaufU5yJi3T-OWdEO5olRcsxWXc_OlKFEgjGoEuNUFtkqMxCsxwFsjeoykFC2QCocsN1etbO5-O6wg2haG1si5E6erm1Rsjmac0ipcgHKSGOOSE1a9B30oMG7OJEZCL0HD-E2EFaDbkmCkD8Qk3blK9AqWLHvotc"></div>
+<div class="w-full md:w-1/2 space-y-4">
+<h3 class="font-headline-md text-headline-md">Grand Cruiser V8</h3>
+<p class="text-body-lg text-secondary">Varian tertinggi untuk keluarga yang mengutamakan privasi.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Captain Seats with Ottoman</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Rear Seat Entertainment 13"</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Sedan Executive Content (Card Stack) -->
+<div class="tab-content" id="sedan-executive">
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-1 bg-surface-container-high p-8 rounded-3xl border border-outline-variant hover:-translate-y-4 transition-transform duration-500 shadow-sm">
+<img class="w-full h-48 object-cover rounded-xl mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhES_jL3FHWwHKO3sEOiPQn3mvZ4XJmzL0cAO_l_HGIVZOuVCtHut0aK_Hxzdu2x_sQhfI6Fq7ImPxzrOgz_0AjB4Yle06mfuko7U3GXdRVj0cZndwu9ccQTQo7vvz7DxYrPlhAT1A59AUZJcD1QVyp7l_wQKpB2jm8S26z3aLzNfFaEpF0ySyyPd2XPhSQCS7KM1EkX_K1Pyfas_buufU4xtKHO-dstx3xnF4wwNS9oS13KLAGf4whtr87UVMfUT8NNGy-T4Hwko">
+<h3 class="text-2xl font-bold mb-2">Presidential S7</h3>
+<p class="text-secondary mb-4">Simbol kesuksesan dengan kenyamanan kabin kedap suara.</p>
+<button class="text-primary font-bold flex items-center gap-2">Detail Spesifikasi <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<div class="flex-1 bg-surface-container-low p-8 rounded-3xl border border-outline-variant hover:-translate-y-4 transition-transform duration-500 shadow-sm md:mt-8">
+<img class="w-full h-48 object-cover rounded-xl mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW-Tz98EtmceSxONxDLk0Q5D_noPauokkYLt8RvOWtunUV9mrGaWyKZ2iOYFotAAJGyQupW3m0CO0bDbg-KVqyMZsQ16leiSPn56k1oZBMqSTkruawUiYSULu8nACQvPQdBMG13_-y3pahu_-60u1zb_zCDg1jgKGO46xGzrrIIXU_iJr7e09fI3cXsN5lSJNbfyDMfFx2amWAdHCoNkiEanqGf0lCdLCHzoeGbhCHuIDvEllRfvfEvYF8Uipb92eXPj1hQcMoulg">
+<h3 class="text-2xl font-bold mb-2">Elite Stream</h3>
+<p class="text-secondary mb-4">Handling presisi untuk eksekutif yang gemar mengemudi sendiri.</p>
+<button class="text-primary font-bold flex items-center gap-2">Detail Spesifikasi <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Hatchback City Content (Masonry) -->
+<div class="tab-content" id="hatchback-city">
+<div class="columns-1 md:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+<div class="break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm border border-outline-variant">
+<img class="w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnyf1oUPfe1rjQQ3Edx40EzxBQaFf4wio05W59Yod_pw6Jd9kJWOo6-wKhUfF4sND6HW55UFQdC_YgJKJ3puPcKIQpvKw5YziWVI9zHYHJiwntrfDhfjsB4IJR6h9lpbnCjGkGsV5a1au_z1U38PanORTmfRM5dnmeE0dytvNCi5LfoPpePGFYAh3_sRph3wflo5miLy8b62U23jooEhRpsHSkcp2JWFUu9eJVfvXFHrwECiOBBOHmPco3dQcXPFk7lZyQAekHeXk">
+<div class="p-6"><h4 class="font-bold">Swift City Z</h4></div>
+</div>
+<div class="break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-sm border border-outline-variant">
+<img class="w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnUpUmP-_7YHkJg3oj7zMvj_3G0OOojNQJQFKSAE-zYzE3UU2df8cCFus_bVmAOpwsvi-ORKcMUmDYavlyBtVQY6CAb1bYHRnnr3hhCQ81VLnPkJfk938VIqOZxtzJilwb2HEpvscOJRoGpBPHjXUnaQueu9HKjPFj7PBaTZihnvW4UTKvZ3aAge_3T4atAspF14NdygUKliijfN-p5xNsE1Om0WiWqEu599X3w4-_-GQafJrGbBG6RkXc6EGIWBpjzFB7IbYaxdY">
+<div class="p-6"><h4 class="font-bold">Neon Hatch Pro</h4></div>
+</div>
+</div>
+</div>
+<!-- EV Future Content (High-tech) -->
+<div class="tab-content" id="ev-future">
+<div class="bg-inverse-surface p-12 rounded-[3rem] text-inverse-on-surface">
+<div class="flex justify-between items-end mb-12">
+<div><h2 class="font-display-lg text-headline-lg text-primary-fixed">EV Future</h2><p class="text-primary-fixed-dim">Masa depan adalah listrik.</p></div>
+<span class="material-symbols-outlined text-6xl text-primary-fixed opacity-50">bolt</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-primary-fixed transition-all group">
+<img class="w-full h-40 object-contain mb-6 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuwOlNTPuyoShCT86mybfOfk_7dzCdBGMSethogDTRohwReimVJH9JMQpvm6v7GYCcsdCfuiKdv702Z-JcnziTgRgSwJaNOYmn50jIalv3V1wIxYaO8URVO3_tSx7-zU1fr2dXreIsscBw-LOPYw6wt6qL5eNgdnY0pqFzNE21hy-TvL1WHkHb_C07XFn-MXurWRdS4yd2WD8yhySBHNPEGvRvWLa9yzi4O33gktkrZAykqht78KPtf3c7TZNGPlLM8whZprpdOQE">
+<h3 class="text-2xl font-bold mb-2">Volt-X 500</h3>
+<p class="opacity-70">Range: 500 KM | 0-100: 3.5s</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hybrid Efficient Content (List Style) -->
+<div class="tab-content" id="hybrid-efficient">
+<div class="space-y-4">
+<div class="bg-white p-6 rounded-2xl flex items-center justify-between border-l-4 border-primary hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6g7-iEy1O-K6Fh8dOCgCl17cdj2ZrdUtpQL3a0kURc1luUnMhQ-J5L9WjF7s87dsZek-HHspHnsQvhLsKRNlM94R_KIEqIM40gXcTZ8ySeaYSYSy2w5D8iCHCpG0V51huDSGy7ZYN41sHEut5cyHJxy7bfJa9KXpFZ0tSONOfm9f_smHrIOoHoOw6v7HcOPmO0C-dMLjqikUiI0Q7UmZI0BJ7yz87RLv_FBJvTBFIfYBqskqXOtlKxRK1QOBgOY1YVp1kfbwjT34"></div>
+<div><h4 class="font-bold text-xl">EcoDrive H1</h4><p class="text-secondary">Kombinasi efisiensi BBM terbaik di kelasnya.</p></div>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Compact City Content (Horizontal Scroll) -->
+<div class="tab-content" id="compact-city">
+<div class="flex gap-stack-lg overflow-x-auto hide-scrollbar pb-8">
+<div class="flex-none w-72">
+<img class="w-full aspect-square object-cover rounded-3xl shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9b_vwb4p9DxyycWlHGYhzqWim5koXaxWqiX6LJNIyEWTjBu4lObOJ3zVQ1IsQKh3krtdjnc60M2eQIRveNupzoUYvEkXdEQLA6D91G-59bBRRaQ1DVH6IFX13K60uHz1DgKt_Oh-se7twW_Ps2Ctulx3fYfIuTDBVu9VprACasJh8w1n1rKd5yvR_fN0_gOTMbUHe80gwXXbFEGvKCAfBzF4D_23FBwDll3md4OH8tmE6NLQzD94DCB0PvaAhHIQ9sEDZYYYqx04">
+<p class="mt-2 font-bold text-center">Micro M1</p>
+</div>
+<div class="flex-none w-72">
+<img class="w-full aspect-square object-cover rounded-3xl shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCif7L4m74UHCAA49OPhz43USz8nN_ox4-4uHY1xP-AbN57pYyUKL18kihsKIjSAApNiFLH0QmHDY9gEj-NqxnBTQHyiXpunBFbmdgpHpHike-sEL1Q-nrB8kXSp0DeJAJmpd4y7xdCdEuumXKLTtWiTWhIXGLnSf12rBtVG1sChu0LMPc4U53M_xVQ9BugCd-us3bbhBxMUZiY2SJtHbWrSzoBCsfZBzUPPeqyip8YFK3s3qQy9rsqgJyd_3x3uoDVx53CY4w4K48">
+<p class="mt-2 font-bold text-center">Trendy T5</p>
+</div>
+</div>
+</div>
+<!-- Luxury Class Content (Single Focus) -->
+<div class="tab-content" id="luxury-class">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8"><img class="w-full aspect-[16/9] object-cover rounded-[3rem] shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnVBylQnuS1qsn8f0-0C3aMQjV86re4ZMMYzzwwn5nsK9se1LFgDlEEJjBxn3klnmCHt611kYUYsIEeaM8OUW4DLNYmAZN_qR423xRtmueEfT5IsjJxdwg0OsIQ6M25iKwv7ZWEWd5z12ocFttt3Xq5zdyTnqYHJ1bRHv7ShKwUGCZKc10LaIGb_F835NLFbug-tYd_vr9_AzDhNZbglrBJekC0iNQ_TBCCEjkDX1pB2nhZISo5Dsr4mUAAYdBqsLBr3MHDjWTYYA"></div>
+<div class="lg:col-span-4 space-y-6">
+<h2 class="font-headline-md text-headline-lg">Luxury Class</h2>
+<p class="text-secondary">Kesempurnaan mutlak tanpa kompromi.</p>
+<a class="block text-center bg-inverse-surface text-inverse-on-surface py-4 rounded-xl font-button hover:bg-surface-tint transition-colors" href="https://wa.me/628123456789">Konsultasi Eksklusif</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promo Terbaru -->
+<section class="bg-primary-fixed py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-x">
+<div class="bg-white rounded-[2rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-stack-lg shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32"></div>
+<div class="flex-1 space-y-6 relative z-10">
+<span class="bg-error text-on-error px-4 py-1 rounded-full text-label-bold">PROMO TERBATAS</span>
+<h2 class="font-headline-lg text-headline-lg">Cashback Hingga Rp 50 Juta &amp; Bunga 0%</h2>
+<p class="text-secondary text-lg">Khusus untuk pemesanan di bulan ini. Dapatkan juga gratis asuransi All-Risk selama 1 tahun dan aksesoris eksklusif senilai 5 Juta Rupiah.</p>
+<div class="flex gap-4">
+<div class="bg-surface-container px-6 py-4 rounded-2xl">
+<span class="block text-2xl font-bold text-primary">0%</span>
+<span class="text-sm text-secondary">Bunga Kredit</span>
+</div>
+<div class="bg-surface-container px-6 py-4 rounded-2xl">
+<span class="block text-2xl font-bold text-primary">Free</span>
+<span class="text-sm text-secondary">Service 4th</span>
+</div>
+</div>
+</div>
+<div class="flex-none">
+<img class="w-64 h-64 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymfKreIljRN7hw3vZb0Gw7GrPDV_upTBvB6FEDvKZxwitJULJw74HLoPUti_SIXE2KPCW-Dv-QcwEtcDS99FkWHes54PLPOnFLJmnT3ZFTs3npFohYYw2Wu-ofp_X-ys_yUXgnkXUk_2gqU7bsdd3s3GSX76-o_iwgN8_CsdClLitZ1PoZJD0TRfPhk_eSx4mvpJLVwQqn8Rh1eV_SpEQ4wo0z6gpm0-P_quX9FF5e1yDnHpGU5kFH-uZDe2bVSDh8LH6GpVlZag">
+</div>
+</div>
+</div>
+</section>
+<!-- Simulasi Kredit -->
+<section class="px-margin-x py-section-gap max-w-container-max mx-auto" id="simulation">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Simulasi Kredit</h2>
+<p class="text-secondary mb-8">Hitung estimasi cicilan bulanan Anda dengan mudah.</p>
+<div class="space-y-stack-md">
+<div>
+<label class="block font-label-bold mb-2">Harga Mobil (IDR)</label>
+<input class="w-full h-14 bg-surface-container-low border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 transition-all" placeholder="Contoh: 350000000" type="number">
+</div>
+<div>
+<label class="block font-label-bold mb-2">Uang Muka / DP (IDR)</label>
+<input class="w-full h-14 bg-surface-container-low border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 transition-all" placeholder="Min. 20%" type="number">
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-button hover:bg-primary-container transition-all">Hitung Cicilan Sekarang</button>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-[2rem] p-10 flex flex-col justify-center text-center">
+<p class="font-label-bold uppercase tracking-widest text-secondary">Estimasi Cicilan Anda</p>
+<h3 class="text-5xl font-display-lg text-primary my-4">Rp 4.500.000</h3>
+<p class="text-secondary">per bulan</p>
+<hr class="my-8 border-outline-variant">
+<div class="space-y-4 text-left">
+<div class="flex justify-between"><span class="">Total Pinjaman</span><span class="font-bold">Rp 280.000.000</span></div>
+<div class="flex justify-between"><span class="">Biaya Admin</span><span class="font-bold text-primary">FREE PROMO</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kenapa beli lewat saya -->
+<section class="bg-surface py-section-gap" id="features">
+<div class="max-w-container-max mx-auto px-margin-x">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg">Kenapa Beli Lewat Budi?</h2>
+<p class="text-secondary">Layanan personal yang tidak akan Anda temukan di dealer biasa.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-white rounded-3xl text-center space-y-4 hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="text-xl font-bold">Proses Tercepat</h3>
+<p class="text-secondary">Approval kredit hanya dalam 1x24 jam. Tanpa ribet, saya yang urus semua berkasnya.</p>
+</div>
+<div class="p-8 bg-white rounded-3xl text-center space-y-4 hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h3 class="text-xl font-bold">Pengiriman Gratis</h3>
+<p class="text-secondary">Unit diantar langsung ke rumah Anda menggunakan towing eksklusif agar tetap mulus.</p>
+</div>
+<div class="p-8 bg-white rounded-3xl text-center space-y-4 hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<h3 class="text-xl font-bold">Konsultasi 24/7</h3>
+<p class="text-secondary">Bantuan purna jual hingga klaim asuransi tetap saya bantu selamanya.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="bg-surface py-section-gap" id="faq">
+<div class="max-w-3xl mx-auto px-margin-x">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Pertanyaan Umum</h2>
+<div class="space-y-4">
+<details class="bg-white rounded-xl p-6 group border border-outline-variant">
+<summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg">
+                            Apakah bisa test drive di rumah?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-secondary">Tentu saja. Saya bisa membawakan unit test drive ke rumah atau kantor Anda.</p>
+</details>
+<details class="bg-white rounded-xl p-6 group border border-outline-variant">
+<summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg">
+                            Apa saja syarat pengajuan kredit?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-secondary">Cukup siapkan KTP Suami Istri, KK, NPWP, Slip Gaji, dan Print Out Tabungan 3 bulan terakhir.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Big CTA -->
+<section class="px-margin-x py-section-gap">
+<div class="max-w-container-max mx-auto bg-primary rounded-[3rem] p-12 text-on-primary text-center space-y-8">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg">Siap Untuk Mobil Baru?</h2>
+<p class="text-xl opacity-90 max-w-2xl mx-auto">Tanya-tanya dulu gratis, saya siap membantu kapan saja via WhatsApp.</p>
+<a class="inline-flex items-center gap-4 bg-white text-primary px-10 py-5 rounded-full font-button text-xl hover:scale-105 transition-transform shadow-2xl" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-3xl">chat</span> Chat WhatsApp Sekarang
+</a>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-low border-t border-outline-variant py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-stack-lg px-margin-x max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">AutoVerse</div>
+<p class="text-on-surface-variant font-body-md">Layanan Concierge Auto Sales terbaik. Profesional, Jujur, dan Amanah.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-lg">Navigasi</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class=""><a class="hover:underline text-primary" href="#">Terms of Sale</a></li>
+<li class=""><a class="hover:underline text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-lg">Lokasi</h4>
+<p class="text-on-surface-variant">Jl. Sudirman No. 123, Jakarta Pusat. (09.00 - 18.00).</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-lg">Ikuti Saya</h4>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined">public</span></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined">camera</span></div>
+</div>
+</div>
+</div>
+<div class="px-margin-x mt-12 pt-8 border-t border-outline-variant text-center text-sm text-on-surface-variant">
+            © 2024 AutoVerse Sales Hub. Professional Concierge Auto Sales.
+        </div>
+</footer>
+<!-- FAB -->
+<a class="md:hidden fixed bottom-6 right-6 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center z-50 animate-bounce" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</a>
+<script>
+    function showCategory(categoryId) {
+        // Hide all contents
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Deactivate all buttons
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'active');
+            btn.classList.add('border-outline-variant', 'text-secondary');
+        });
+
+        // Show selected content
+        document.getElementById(categoryId).classList.add('active');
+
+        // Activate selected button
+        const activeBtn = document.querySelector(`[data-target="${categoryId}"]`);
+        activeBtn.classList.remove('border-outline-variant', 'text-secondary');
+        activeBtn.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'active');
+
+        // Smooth scroll to container top if mobile
+        if (window.innerWidth < 768) {
+            document.getElementById('inventory').scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
+
+</body></html>

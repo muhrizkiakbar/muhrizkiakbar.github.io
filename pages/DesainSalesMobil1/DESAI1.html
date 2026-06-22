@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MobilKu - Elegansi Tanpa Batas</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#0a1a1a',
+            'brand-teal': '#142b2b',
+            'brand-accent': '#c5a35d', // Gold-ish accent
+            'brand-light': '#f8f9fa',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    
+    .hero-gradient {
+      background: linear-gradient(to right, rgba(10, 26, 26, 0.8) 30%, transparent 100%);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .faq-item[open] summary svg {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-white text-brand-dark font-sans">
+<!-- BEGIN: Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<!-- Logo -->
+<div class="flex-shrink-0 flex items-center">
+<span class="text-2xl font-bold tracking-tighter text-brand-dark">MOBILKU<br></span>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase">
+<a class="hover:text-brand-accent transition" href="#">SUV</a>
+<a class="hover:text-brand-accent transition" href="#">HYBRID</a>
+<a class="hover:text-brand-accent transition" href="#">EV</a>
+<a class="hover:text-brand-accent transition" href="#">PROMO</a>
+<a class="hover:text-brand-accent transition" href="#">SIMULASI</a>
+<a class="bg-brand-dark text-white px-6 py-3 hover:bg-gray-800 transition" href="#">HUBUNGI SALES</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: HeroSection -->
+<section class="relative h-screen flex items-center overflow-hidden pt-20">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Premium SUV" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmO5iIn-PPq0uApRHV8dTAfsI0WjV1ibr3h0cNpOJ_zSGjd0p81bvXiIzRcajoosFdYOtG9q7jIyI_8NdtfH5GjME_A2cpKJTmNKA15qjgQckduprSUKJWIgLoSFuS1hwMgJvu7g4Y_sBAacWHd0egmQUqTmTc-RbJOcl84AxOaVqWkkVegSTfqldJJiG4XaNPXXMuJOzsy6-m5SXjO73I1YzxzAm3yGMllcOx-JVlzXxX2AMVHZc32xFhYS4IVAlVeK0aMXn_oaA">
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+<p class="text-sm tracking-[0.3em] uppercase mb-4 opacity-80">Beyond Boundaries</p>
+<h1 class="text-5xl md:text-7xl font-bold leading-tight max-w-2xl mb-6">
+        Elegansi Tanpa Batas dengan MOBILKU.
+      </h1>
+<p class="text-lg opacity-70 max-w-xl mb-10 leading-relaxed">
+        Rasakan standar baru kemewahan SUV masa kini. Desain revolusioner memberikan layanan eksklusif untuk kepemilikan mobil impian Anda.
+      </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-brand-dark border border-brand-dark px-8 py-4 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-brand-dark transition-all duration-300">
+          LIHAT KATALOG SUV
+        </button>
+<button class="bg-transparent border border-white px-8 py-4 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-brand-dark transition-all duration-300">
+          BOOKING TEST DRIVE
+        </button>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: PromoSection -->
+<section class="py-24 bg-brand-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-end mb-12">
+<div data-purpose="promo-header">
+<h2 class="text-3xl font-bold mb-2">Penawaran Eksklusif Hari Ini</h2>
+<p class="text-gray-500">Promo terbatas yang dirancang khusus untuk kenyamanan finansial dan kepuasan berkendara Anda.</p>
+</div>
+<a class="text-xs font-bold tracking-widest uppercase border-b-2 border-brand-dark pb-1" href="#">LIHAT SEMUA PROMO</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Main Promo Card -->
+<div class="md:col-span-2 bg-white p-12 relative overflow-hidden flex flex-col justify-between min-h-[400px] border border-gray-100 shadow-sm">
+<div class="z-10">
+<span class="bg-brand-dark text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest mb-6 inline-block">JPM-7Y</span>
+<h3 class="text-3xl font-bold mb-4">Promo Kredit Eksklusif</h3>
+<p class="text-gray-600 max-w-sm mb-8 leading-relaxed">Nikmati fasilitas bunga 0% hingga 2 tahun khusus untuk tenor tertentu. Transaksi aman, transparan, dan dibantu hingga unit sampai di garasi Anda.</p>
+<a class="inline-flex items-center text-sm font-bold group" href="#">
+              Hubungi Sales Sekarang 
+              <svg class="h-4 w-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- Abstract Background Element -->
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M47.7,-62.5C61.4,-54.6,71.7,-40.3,75.2,-25.2C78.7,-10.1,75.4,5.9,69.5,20.4C63.6,34.9,55.1,48,43,56.9C30.9,65.8,15.5,70.6,0.1,70.5C-15.3,70.4,-30.5,65.4,-43.4,56.1C-56.3,46.8,-66.8,33.1,-71.4,17.9C-76,2.7,-74.6,-14.1,-67.2,-28.4C-59.7,-42.6,-46.2,-54.4,-32.1,-62.2C-18,-69.9,-3.3,-73.7,11.5,-70.3C26.3,-67,41.1,-56.4,47.7,-62.5Z" fill="#0A1A1A" transform="translate(100 100)"></path></svg>
+</div>
+</div>
+<!-- Secondary Promo Card -->
+<div class="bg-brand-dark text-white p-12 flex flex-col justify-between text-center items-center">
+<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-8">
+<svg class="h-8 w-8 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4">DP Ringan Mulai 10%</h3>
+<p class="text-sm opacity-60 mb-10 leading-relaxed">Wujudkan impian memiliki SUV MobilKu dengan uang muka yang sangat terjangkau. Proses cepat dan data dibantu!</p>
+</div>
+<button class="bg-white text-brand-dark px-8 py-4 w-full text-[10px] font-bold tracking-widest uppercase hover:bg-brand-accent hover:text-white transition-all">AMBIL PROMO INI</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PromoSection -->
+<!-- BEGIN: ProductCatalog -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold mb-8">Jajaran Mahakarya MobilKu</h2>
+<!-- Tabs -->
+<div class="flex flex-wrap justify-center gap-2 mb-12">
+<button class="px-8 py-2 bg-brand-dark text-white text-xs font-bold rounded-sm">SEMUA</button>
+<button class="px-8 py-2 border border-gray-200 text-gray-500 text-xs font-bold hover:bg-gray-50 rounded-sm">SUV</button>
+<button class="px-8 py-2 border border-gray-200 text-gray-500 text-xs font-bold hover:bg-gray-50 rounded-sm">HYBRID</button>
+<button class="px-8 py-2 border border-gray-200 text-gray-500 text-xs font-bold hover:bg-gray-50 rounded-sm">ELECTRIC</button>
+</div>
+<!-- Car Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+<!-- Car Card 1: SUV -->
+<div class="group border border-gray-100 p-6 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-video bg-gray-50">
+<span class="absolute top-2 left-2 z-10 bg-brand-teal text-[9px] text-white px-2 py-1 font-bold tracking-wider">NEW ARRIVAL</span>
+<img alt="Toyota Fortuner" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdiIlcZ_Nq9tIkomTJC5lm_glT-LicD-GE9qPgIWwS_OcvHV28BA1ZP-qz-q96SpqbwvijjYag8pxAvbGslSg30HiYG1tEIoUzY5Qhsui2r8Ip6u_VU0iC77lw6Z1wZPTrWMtJXG8RqBZniRUGdpHaqDSG_QZ0gryKcTZBMHSGi1Poy6uL0k0ojAHAm--CaW7vFKs0eRBT3f5xoAtu_4Qm5jjF3HE12DZqQKm0kxS7Z6wmCcsanSbi_LsZE3RX9FRYBPnbDnZEh_0">
+</div>
+<h4 class="text-lg font-bold">Toyota Fortuner</h4>
+<p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">URBAN OFF-ROAD SUV</p>
+<div class="grid grid-cols-3 gap-2 border-t border-gray-100 pt-4 mb-6 text-[10px] text-gray-500 font-medium">
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> 2.8L AT</span>
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> 7 Seats</span>
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Diesel</span>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-[9px] font-bold text-gray-400 uppercase">Harga Mulai</p>
+<p class="text-xl font-bold">Rp 560.000.000</p>
+</div>
+<button class="bg-brand-dark text-white p-3 hover:bg-brand-accent transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</div>
+<!-- Car Card 2: Hybrid -->
+<div class="group border border-gray-100 p-6 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-video bg-gray-50">
+<span class="absolute top-2 left-2 z-10 bg-brand-accent text-[9px] text-white px-2 py-1 font-bold tracking-wider">PREMIUM FLAGSHIP</span>
+<img alt="Toyota Corolla Cross Hybrid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpFY2thv-GfPyQOWzQesAYN_L2pDPKcOFJwg4B3XkHlOniFAzEHr7SPx1PMgzgXrRVhGt7whC14szWoubQj1bgqvevBrrVES0DokKD5YgOLlJ3z4SORLhjlo7yMeKD4zRIeqAfRWsfFBHd_iA1gCViCW-e_aGgbr-wvzGnHvPBlI_LdY5jGbHC0VoWlHOrct4TRttNhG14Fs0R4HdIeK3jM4GvniAVPjRs1OXHhhim2QwQ82VA6KbOgMZ3DeP5SFwbyEYVTroLDFk">
+</div>
+<h4 class="text-lg font-bold">Corolla Cross HEV</h4>
+<p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">LUXURY EXECUTIVE SUV</p>
+<div class="grid grid-cols-3 gap-2 border-t border-gray-100 pt-4 mb-6 text-[10px] text-gray-500 font-medium">
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> 1.8L HEV</span>
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> 5 Seats</span>
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Hybrid</span>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-[9px] font-bold text-gray-400 uppercase">Harga Mulai</p>
+<p class="text-xl font-bold">Rp 610.000.000</p>
+</div>
+<button class="bg-brand-dark text-white p-3 hover:bg-brand-accent transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</div>
+<!-- Car Card 3: EV -->
+<div class="group border border-gray-100 p-6 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-video bg-gray-50">
+<span class="absolute top-2 left-2 z-10 bg-green-700 text-[9px] text-white px-2 py-1 font-bold tracking-wider">ECO FRIENDLY</span>
+<img alt="Hyundai IONIQ 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDwK6tcJkG0zqn_cvfgwAu_Y1rImVPjM23n3eaWafDDoAuZy7NfQO0baU-ebW1ZhTa7MlYo4j0Yr_6n7GxJPYgRFVZYV7LEXGLIbHFrPD3gF26psXjQFWU6jEeQunqwV8Pk6B1FpDtELKxjtDIB7k2PcDy4Y5nAGES1RhBPpvVyCVuneY9s9HATOEy7dJOuL2wv9jCmWvixw6ulUWJZoOF2dhXGL_Zf2PYmhS-2UP9niWJtroXmv_0tDkXn_K5xOItNxZsaI47IhU">
+</div>
+<h4 class="text-lg font-bold">IONIQ 5</h4>
+<p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">PURE ELECTRIC LUXURY</p>
+<div class="grid grid-cols-3 gap-2 border-t border-gray-100 pt-4 mb-6 text-[10px] text-gray-500 font-medium">
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> 481km Range</span>
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> 5 Seats</span>
+<span class="flex items-center"><svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Fast Charge</span>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-[9px] font-bold text-gray-400 uppercase">Harga Mulai</p>
+<p class="text-xl font-bold">Rp 780.000.000</p>
+</div>
+<button class="bg-brand-dark text-white p-3 hover:bg-brand-accent transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</div>
+</div>
+<button class="mt-12 px-10 py-3 border border-brand-dark text-xs font-bold tracking-widest uppercase hover:bg-brand-dark hover:text-white transition-all">
+        DOWNLOAD BROSUR LENGKAP
+      </button>
+</div>
+</section>
+<!-- END: ProductCatalog -->
+<!-- BEGIN: CreditSimulation -->
+<section class="py-24 bg-brand-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row shadow-2xl overflow-hidden">
+<!-- Form Area -->
+<div class="flex-1 bg-white p-10 md:p-16">
+<h2 class="text-3xl font-bold mb-4">Simulasi Kredit Pintar</h2>
+<p class="text-gray-500 mb-10">Dapatkan estimasi cicilan yang paling sesuai dengan profil finansial Anda. Transparansi adalah prioritas kami.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-[10px] font-bold text-gray-400 uppercase mb-2">PILIH MODEL</label>
+<select class="w-full border-gray-200 focus:ring-brand-accent focus:border-brand-accent py-3">
+<option>Toyota Fortuner</option>
+<option>Corolla Cross HEV</option>
+<option>IONIQ 5</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-gray-400 uppercase mb-2">TENOR (TAHUN)</label>
+<select class="w-full border-gray-200 focus:ring-brand-accent focus:border-brand-accent py-3">
+<option>1 Tahun</option>
+<option>3 Tahun</option>
+<option>5 Tahun</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-gray-400 uppercase mb-2">UANG MUKA (DP)</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">Rp</span>
+<input class="w-full border-gray-200 pl-10 py-3 focus:ring-brand-accent focus:border-brand-accent" type="text" value="50.000.000">
+</div>
+</div>
+<button class="w-full bg-brand-dark text-white py-4 text-xs font-bold tracking-widest uppercase hover:bg-gray-800 transition" type="button">
+              HITUNG ANGSURAN
+            </button>
+</form>
+</div>
+<!-- Result Area -->
+<div class="lg:w-1/3 bg-brand-teal text-white p-10 md:p-16 flex flex-col justify-center items-center text-center">
+<p class="text-[10px] font-bold tracking-widest uppercase opacity-60 mb-2">ESTIMASI CICILAN BULANAN</p>
+<p class="text-4xl md:text-5xl font-bold mb-6">Rp 7.850.000</p>
+<p class="text-xs opacity-50 mb-10 leading-relaxed italic">*Angsuran dapat berubah sewaktu-waktu sesuai dengan kebijakan suku bunga bank terkini.</p>
+<button class="w-full bg-white text-brand-dark py-4 text-xs font-bold tracking-widest uppercase hover:bg-brand-accent hover:text-white transition-all">
+            KONSULTASI SALES
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CreditSimulation -->
+<!-- BEGIN: TestDriveSection -->
+<section class="py-24 bg-brand-dark text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img alt="Interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4gFlI90Ku_ikG2Nb3tUOY06IWK7Di0zCqjYxkjhImM7JzvXTzcF8HTYJj1duHEQ3k8MqVL-_emGohkQYkuQjFo4iF-qEcWQhhw3-kdJOSYvE0fciEypNqb9XzctwvS97tqCfJxMfDW3vesan-AWAyhcPiTToyOCM1aSzW2WyFvVc6EeIqc3ATCpgmw8oFJdOJB7L4KiRGyYSGBvf2B21UIzMcEhP28sN0DpbUfpRL-B8j3C_NezYybwTm6jKhTHvRswnc00_1gZI">
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold mb-4">Rasakan Langsung Sensasi MobilKu</h2>
+<p class="text-gray-400 mb-12 max-w-2xl mx-auto">Kami mengantarkan unit test drive langsung ke depan pintu rumah atau kantor Anda. Eksklusivitas tanpa harus keluar rumah.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+<div class="glass-card p-8 flex items-center space-x-6 text-left cursor-pointer hover:bg-white/10 transition">
+<div class="w-12 h-12 flex-shrink-0 bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold">Atur Jadwal</h4>
+<p class="text-xs text-gray-400">Pilih waktu luang Anda</p>
+</div>
+</div>
+<div class="glass-card p-8 flex items-center space-x-6 text-left cursor-pointer hover:bg-white/10 transition">
+<div class="w-12 h-12 flex-shrink-0 bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold">Pilih Lokasi</h4>
+<p class="text-xs text-gray-400">Rumah atau kantor</p>
+</div>
+</div>
+</div>
+<button class="bg-white text-brand-dark px-12 py-4 text-xs font-bold tracking-widest uppercase hover:bg-brand-accent hover:text-white transition-all">
+        DAFTAR TEST DRIVE SEKARANG
+      </button>
+</div>
+</section>
+<!-- END: TestDriveSection -->
+<!-- BEGIN: TestimonialsAndGallery -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Testimonials -->
+<div>
+<h2 class="text-3xl font-bold mb-12">Kisah Kepuasan Pelanggan</h2>
+<div class="space-y-12">
+<div class="relative pl-8 border-l-2 border-brand-accent">
+<span class="absolute top-0 left-[-15px] bg-white text-brand-accent">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V4H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.017 21L2.017 18C2.017 16.8954 2.91243 16 4.017 16H7.017C7.56928 16 8.017 15.5523 8.017 15V9C8.017 8.44772 7.56928 8 7.017 8H3.017C2.46472 8 2.017 8.44772 2.017 9V11C2.017 11.5523 1.56928 12 1.017 12H0.017V4H10.017V15C10.017 18.3137 7.33072 21 4.017 21H2.017Z"></path></svg>
+</span>
+<p class="text-gray-600 mb-6 italic">"Layanan Dimas Saputra benar-benar luar biasa. Unit BYD J7 saya sampai lebih cepat dari estimasi, dan proses surat-suratnya dibantu secara total. Mobil ini benar-benar tangguh dan mewah di saat yang sama."</p>
+<div class="flex items-center">
+<img alt="User" class="w-10 h-10 rounded-full mr-4 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ6EdOX9110eKMnLW4WBHfEZRCIxdXxNgVbK6oJqfYpFtcFS3jgJ8Vmij0RhdfzbZiMP_ASbl0Kny4QRtpNzrIoBGIpBfwHePDt0gReUssQgITvjulD_eogyqGe7EhLT5t4MBWQi34WjRsevqHyEXEB4k2kwBtwaP_U3IquiRLVK8Q5U0lJTKfWg__UPJu3MeR07YTeLAA0mQnh697fM5nhZH_AJswkAluNHLiBkyUxZbxcvK2UOqNwfPeLU7cFh8f2N7V4EcjSe0">
+<div>
+<p class="font-bold text-sm">Bapak Hendra Wijaya</p>
+<p class="text-[10px] text-gray-400 font-bold uppercase">PENGUSAHA - JAKARTA</p>
+</div>
+</div>
+</div>
+<div class="relative pl-8 border-l-2 border-brand-accent opacity-60">
+<p class="text-gray-600 mb-6 italic">"Saya sangat terbantu dengan simulasi kreditnya yang transparan. Tidak ada biaya tersembunyi. Pelayanan after-sales MobilKu juga sangat memuaskan."</p>
+<div class="flex items-center">
+<img alt="User" class="w-10 h-10 rounded-full mr-4 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA11EgqOK7dpx7fQgQzpv03Rp9Cns_6jawCA2fUHYmvhsdGsJpgyqX-urOUKwrZ7dReJRPlLxYI_0eQdL2cMpwdIcKAMnmzE4dx5UfkcBHcBlXcnNKkuNcpk5E21Pbmk-tx8B7_1LU9WC_cNb3eMEx51czEyREGmbQ9BTNxmaB7Vp4toLxnVY-otqlQ6p-6vnObwbhD31xv9vbDnsMxICcir3pY1LSYsgIafcfDYCHmE3--1gsihMlt21rOYKP-4AP6H810WTKr148">
+<div>
+<p class="font-bold text-sm">Ibu Sarah Monica</p>
+<p class="text-[10px] text-gray-400 font-bold uppercase">ARCHITECT - BANDUNG</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery -->
+<div>
+<h2 class="text-3xl font-bold mb-12">Galeri Penyerahan Unit</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-gray-100"><img alt="Showroom" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0bLkkuUa02a4IuBCUPoDO9a1KCw7wJtSnxv9silObQ30Pcgzz46Lttc2Q71Pi5rDYgLz1_0GpwlsVB6MsZNtvR29VgFneuHJuuD9WXhHPncm1lG8omdntnNCQZFPRvI0p3GnL9ZC-oasaQGkrA1ZqfBcCrwpuDSfxnzPzPm_jrCE8g9LSHlczOnsKHDINsz9aaNOVjswECoKQLCGW29C6n91zSMq7ngXFs-7iDi5a5u1bXYzdSsM060h8ATL-p0oGoQWuyhGFh5I"></div>
+<div class="aspect-square bg-gray-100"><img alt="Delivery" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfr5G5PIhqR6PmZot-QsFFx6eyuHqmDyQvZ7zCruWpjMIZWh80UYx9eP7xUmGMxhELI70MJZVEQeVLNXQjxK0xmdV5LVjFci7fPc4Md9yfF9BK4cwxaoBjP_dTbEWkGf9Fxs0bdubJRNxTPsKEIAxR_60PY1Em0xBudY8gl1kM3bZS5jCpIg0ovEJqROw10W5FNNdFfUbl2TVkb4U3ePavYr0GH8G8rTKCaoyuIaPLxF8Jw77WBF4Ak1JskcYzbnQ2Oo8RqYA9RvU"></div>
+<div class="aspect-square bg-gray-100"><img alt="Customer" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASfQOwj65FPhXR-SooCbRbTA7GqAvnBKFqQ82NkVEfX1uk1PIZMTnhPy8QUcYVZfXzcMVnCM2AbS9ASP_VIlsyic5gyb63FUuD8xiZS8vdJ7UsnSDBPcpab-Dq_-2B74iQfPk5Fr-502WpzWj9EzVvEkEGD-dRlxJ0MLITTUrYnFii1yvwWF7fweYmaIKfoW32mY2ToOeKahVzbyL2uJ3VEWvU5GhHkWxLTizTuUcLcNTZD7Ni_15Re94n5lq_u6rRnLmX2Op2osg"></div>
+<div class="aspect-square bg-brand-teal text-white flex flex-col items-center justify-center text-center p-4">
+<p class="text-3xl font-bold mb-2">150+</p>
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-60 mb-6">UNIT TERKIRIM BULAN INI</p>
+<button class="border border-white/30 px-6 py-2 text-[8px] font-bold tracking-widest uppercase hover:bg-white hover:text-brand-dark transition">LIHAT SEMUA</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsAndGallery -->
+<!-- BEGIN: FAQSection -->
+<section class="py-24 bg-brand-light">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Pertanyaan Sering Diajukan</h2>
+<div class="space-y-4">
+<details class="faq-item group bg-white border border-gray-100 overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-sm">Berapa lama estimasi inden untuk unit MobilKu?</span>
+<svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</summary>
+<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+            Estimasi inden saat ini berkisar antara 2-4 minggu tergantung pada pilihan warna dan varian yang dipilih. Dimas Saputra akan memberikan prioritas pengiriman untuk setiap pemesanan hari ini.
+          </div>
+</details>
+<details class="faq-item group bg-white border border-gray-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-sm">Apakah bisa tukar tambah (Trade-In) dengan mobil lama?</span>
+<svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</summary>
+<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+            Tentu saja. Kami melayani trade-in untuk semua merk mobil dengan penawaran harga terbaik di atas rata-rata pasar untuk membantu uang muka pembelian MobilKu baru Anda.
+          </div>
+</details>
+<details class="faq-item group bg-white border border-gray-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-sm">Bagaimana sistem servis dan garansi MobilKu di Indonesia?</span>
+<svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</summary>
+<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+            MobilKu memberikan garansi mesin hingga 10 tahun atau 1.000.000 KM dan free servis rutin berkala. Kami memiliki jaringan bengkel resmi yang tersebar luas di kota-kota besar Indonesia.
+          </div>
+</details>
+</div>
+<div class="text-center mt-12">
+<p class="text-xs text-gray-400 mb-6 italic">Punya pertanyaan lain? Hubungi langsung Dimas Saputra.</p>
+<button class="bg-brand-dark text-white px-10 py-4 text-xs font-bold tracking-widest uppercase hover:bg-brand-accent transition">TANYA SALES SEKARANG</button>
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+<!-- BEGIN: Footer -->
+<footer class="bg-brand-light pt-24 pb-12 border-t border-gray-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center text-center">
+<span class="text-2xl font-bold tracking-tighter text-brand-dark mb-8">MOBILKU</span>
+<p class="max-w-lg text-gray-400 text-xs leading-relaxed mb-10">
+          Authorized Dealer MOBILKU Indonesia. Temukan kemudahan kepemilikan mobil SUV premium bersama Dimas Saputra.
+        </p>
+<div class="flex flex-wrap justify-center gap-8 text-[10px] font-bold tracking-widest uppercase mb-12">
+<a class="hover:text-brand-accent transition" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-brand-accent transition" href="#">Kebijakan Privasi</a>
+<a class="hover:text-brand-accent transition" href="#">Kontak Kami</a>
+<a class="hover:text-brand-accent transition" href="#">Lokasi Dealer</a>
+</div>
+<div class="flex space-x-6 mb-16">
+<a class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-dark hover:text-white transition" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-dark hover:text-white transition" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.717.01 3.67.053 2.106.096 3.127 1.147 3.223 3.223.043.953.053 1.24.053 3.67s-.01 2.717-.053 3.67c-.096 2.106-1.147 3.127-3.223 3.223-.953.043-1.24.053-3.67.053s-2.717-.01-3.67-.053c-2.106-.096-3.127-1.147-3.223-3.223-.043-.953-.053-1.24-.053-3.67s.01-2.717.053-3.67c.096-2.106 1.147-3.127 3.223-3.223.953-.043 1.24-.053 3.67-.053zm0-2c-2.473 0-2.783.01-3.753.055-3.057.14-4.757 1.84-4.896 4.896-.045.97-.055 1.28-.055 3.753 0 2.473.01 2.783.055 3.753.14 3.057 1.84 4.757 4.896 4.896.97.045 1.28.055 3.753.055 2.473 0 2.783-.01 3.753-.055 3.057-.14 4.757-1.84 4.896-4.896.045-.97.055-1.28.055-3.753 0-2.473-.01-2.783-.055-3.753-.14-3.057-1.84-4.757-4.896-4.896-.97-.045-1.28-.055-3.753-.055zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+<a class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-dark hover:text-white transition" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+</div>
+<p class="text-[9px] text-gray-400 font-bold tracking-widest">© 2024 MOBILKU By Dimas Saputra. Seluruh Hak Cipta Dilindungi.</p>
+</div>
+</div>
+<!-- Floating WhatsApp Action Button -->
+<a class="fixed bottom-8 right-8 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 z-50" href="#">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.489.881 2.947 1.435 4.51 1.438 5.462 0 9.905-4.444 9.908-9.907.002-2.646-1.03-5.132-2.903-7.007-1.874-1.874-4.359-2.907-7.004-2.909-5.464 0-9.905 4.444-9.908 9.908-.001 1.75.456 3.457 1.326 4.918l-.995 3.637 3.733-.979zm11.446-7.585c-.314-.157-1.86-.917-2.148-1.022-.288-.105-.499-.157-.709.157-.21.314-.813 1.022-.995 1.231-.183.21-.365.235-.679.079-.314-.157-1.325-.489-2.524-1.558-.933-.833-1.564-1.862-1.747-2.177-.183-.314-.02-.484.137-.641.141-.141.314-.367.472-.55.157-.183.21-.314.314-.524.105-.21.052-.393-.026-.55-.079-.157-.709-1.706-.971-2.335-.255-.612-.513-.529-.709-.539-.183-.01-.393-.012-.603-.012s-.55.079-.839.419c-.288.34-.11.759-.11 1.885 0 1.126.393 2.21.576 2.459s1.464 2.253 3.548 3.15c.496.214.883.342 1.185.438.5.158.953.136 1.312.083.399-.058 1.86-.759 2.122-1.493.262-.733.262-1.362.183-1.493-.079-.131-.288-.21-.603-.367z"></path></svg>
+</a>
+</footer>
+<!-- END: Footer -->
+
+
+</body></html>

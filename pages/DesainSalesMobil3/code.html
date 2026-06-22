@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VELOCITY | Premium Auto Consultant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#bcc7de",
+                    "surface-tint": "#545f73",
+                    "outline": "#75777d",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "on-secondary-fixed": "#002109",
+                    "on-error": "#ffffff",
+                    "background": "#fbf8fa",
+                    "primary": "#091426",
+                    "secondary-fixed": "#66ff8e",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1b1b1d",
+                    "on-primary-fixed": "#111c2d",
+                    "inverse-surface": "#303032",
+                    "primary-container": "#1e293b",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#3de273",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#eae7e9",
+                    "tertiary-fixed": "#fadfb8",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#35260c",
+                    "surface": "#fbf8fa",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f5f3f4",
+                    "surface-bright": "#fbf8fa",
+                    "on-secondary-fixed-variant": "#005322",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#007232",
+                    "outline-variant": "#c5c6cd",
+                    "surface-variant": "#e4e2e3",
+                    "on-surface": "#1b1b1d",
+                    "on-surface-variant": "#45474c",
+                    "primary-fixed-dim": "#bcc7de",
+                    "on-tertiary-container": "#a38c6a",
+                    "secondary-container": "#5dfd8a",
+                    "on-primary-container": "#8590a6",
+                    "primary-fixed": "#d8e3fb",
+                    "tertiary-fixed-dim": "#ddc39d",
+                    "surface-dim": "#dcd9db",
+                    "on-tertiary-fixed": "#271902",
+                    "inverse-on-surface": "#f3f0f2",
+                    "surface-container-highest": "#e4e2e3",
+                    "tertiary": "#1e1200",
+                    "on-primary-fixed-variant": "#3c475a",
+                    "secondary": "#006d2f",
+                    "surface-container": "#f0edef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "section-gap-mobile": "64px",
+                    "margin-mobile": "20px",
+                    "section-gap-desktop": "120px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .premium-shadow {
+            box-shadow: 0 20px 40px -15px rgba(30, 41, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-primary">
+<!-- 1. TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">VELOCITY</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md text-primary font-semibold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Koleksi</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Promo</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Simulasi</a>
+</div>
+<button class="bg-secondary px-6 py-2 rounded-full text-on-secondary font-bold flex items-center gap-2 scale-95 active:scale-90 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                WhatsApp
+            </button>
+</div>
+</nav>
+<main>
+<!-- 2. Hero Section -->
+<section class="relative pt-32 pb-section-gap-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
+<div class="lg:col-span-6 z-10">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-4 block">PREMIUM AUTO CONSULTANT</span>
+<h1 class="font-display-lg text-display-lg lg:text-[64px] text-primary leading-tight mb-6">
+                        Konsultan Mobil <br/>Premium Anda
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Temukan mobil impian dengan penawaran eksklusif dan layanan personal dari para ahli otomotif berpengalaman.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold hover:opacity-90 transition-opacity">
+                            Lihat Koleksi
+                        </button>
+<button class="flex items-center gap-2 font-bold px-10 py-4 border-2 border-primary rounded-xl hover:bg-primary hover:text-on-primary transition-all">
+                            Layanan Personal
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative mt-12 lg:mt-0">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] premium-shadow border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A side-profile high-resolution studio shot of a white luxury Range Rover SUV parked in a minimalist, brightly lit concrete gallery. The lighting is soft and high-key, emphasizing the sleek metallic lines of the vehicle. A professional sales consultant in a dark navy tailored suit stands confidently next to the vehicle with a welcoming smile. The overall aesthetic is clean, premium, and corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOnjl3VkGzXAOYw72JpQ8OXUVYuCfc84Mq8BM080I478quTNEtv8qNrASHabl1C-ZF9wZVzvEJ9qxsHeq969186SGfJwY9ZuwILdonfVt9aUB3L880MOLkW4v6X9dWjVmQBd7gdmOp0H3T9eDlf6EUzT_blqsmshRS83xLm4KTr_VRf51jJZCvfy6LO51D_k6Khv7QzjVnfDSrJlde4iGnK_aClil9oV2SXBSKXyya-PiV1sVr7mJlRU6-in2_fHMBAQS0ffmkqV8"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl premium-shadow border border-outline-variant/30 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a professional Indonesian automotive consultant with a friendly and trustworthy expression. He is wearing a white dress shirt and a dark navy blazer. The background is a soft-focus luxury car showroom. The lighting is professional and warm, conveying reliability and expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFSR3ZtPt7AP7Dw4SXaPp3Gi3BC2nKfZV-m4jx7qnWMf4tjvlDDxRYUCw28OFvvzp7jtmDaoLLESLLzMHt-qg5FxW7kLH6-ttes8JokZhi3Fm1WqtmyZ6MvJFjyB4lcQZaUJTG1pStvnLNBJirjLZ4wa4P3o6wY6KD68MLSIePyceyE5ETD8LU3h0V6NbYPa4qsofk16yl882O5VikGCRHaEcbA-sKOW7frMIf2lUEm5R1CsZnxHQFvXWg1uoT8eo7Vs-FfCYivI0"/>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">HUBUNGI KONSULTAN</p>
+<p class="font-headline-sm text-headline-sm text-primary">Bapak Wijaya</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/5 -z-10 skew-x-12 translate-x-20"></div>
+</section>
+<!-- 3. Car Collection Grid (Category Tabs) -->
+<section class="py-section-gap-desktop bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Koleksi Pilihan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Kurasi kendaraan terbaik untuk memenuhi gaya hidup dan kenyamanan berkendara Anda.</p>
+</div>
+<!-- Tabs -->
+<div class="flex overflow-x-auto gap-4 mb-12 hide-scrollbar pb-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold whitespace-nowrap">SUV Urban</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-bold whitespace-nowrap hover:border-primary transition-colors">SUV Adventure</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-bold whitespace-nowrap hover:border-primary transition-colors">MPV Family</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-bold whitespace-nowrap hover:border-primary transition-colors">Sedan Executive</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-bold whitespace-nowrap hover:border-primary transition-colors">EV Modern</button>
+<button class="bg-white text-on-surface-variant border border-outline-variant px-8 py-3 rounded-full font-bold whitespace-nowrap hover:border-primary transition-colors">Hybrid Smart</button>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<!-- Car Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden premium-shadow group transition-transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end studio photography of a modern silver urban SUV featuring a panoramic sunroof and LED headlights. The car is positioned on a clean white floor in a high-key light environment. The image emphasizes the sleek aerodynamics and luxury finish of the car. Cinematic lighting creates subtle gradients on the metallic paint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUqNqlEi0-O5stOYQpPklo-PBGrwkVZnYhheDNLqQxHaXaCRGWgqPB9bnSqmjlFRzcZGxQ23GdIxdJGsLfI1tLgru4NZDKXWZoNAMv9yxtq3LX-zdgzvqtENNSbYwp9oqGIQE22ERkaWGm0v4lRnhB2dodC1ja8_a3NnV_7ZABmfygrS-aeDwoSsjsqDfI9_mQ0VrcVOswYpHJcAOIOTLilQ9F4epO9ZVd6XuwuLk6yFziRUUhWXJpHfidSfBo5sMok6Rs3OYXfj4"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary font-label-caps text-[10px] px-3 py-1 rounded">NEW ARRIVAL</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Toyota Fortuner GR</h3>
+<p class="font-label-caps text-primary text-[14px] mb-4">MULAI DARI <span class="font-bold">Rp 620.000.000</span></p>
+<div class="grid grid-cols-3 gap-2 py-4 border-y border-outline-variant/30 mb-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">enable</span>
+<p class="text-[10px] text-on-surface-variant mt-1">2.8L Diesel</p>
+</div>
+<div class="text-center border-x border-outline-variant/30">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">settings_accessibility</span>
+<p class="text-[10px] text-on-surface-variant mt-1">7 Seater</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">speed</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Automatic</p>
+</div>
+</div>
+<button class="w-full bg-secondary py-4 rounded-xl text-on-secondary font-bold flex justify-center items-center gap-2 hover:opacity-90">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Cek Ketersediaan
+                            </button>
+</div>
+</div>
+<!-- Car Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden premium-shadow group transition-transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Front three-quarter view of a metallic navy blue luxury SUV parked on a marble floor in a minimalist premium dealership. Soft overhead lighting reflects elegantly off the car's body. The background is a clean, bright-toned showroom. The image highlights the sophisticated front grille and sharp LED headlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI5faTnmVJvsffTet-nHEpM95rpr0N_yJs29hbZP2OvQqC-b1D0nEHcnYUD_EdfJ_KkygiwP0KUwJtIFXHWar_J-Zg1oLFjcG9EeHQexbcBdhKAiOhmskWOVG2FaeqHwqGBvTH5c_vZbkOofmwgTZ5Snp6EC9vBHReKMxt-Ssr6mOAhmlR40LvXoY37VX6Lel8r1w2By7UAgEc4ooPz5-2v5yAvjarvOUYYdhUST_R3o12eZtktPnFomxfA4DgbOliizfsJYGf6VQ"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Honda CR-V RS</h3>
+<p class="font-label-caps text-primary text-[14px] mb-4">MULAI DARI <span class="font-bold">Rp 740.000.000</span></p>
+<div class="grid grid-cols-3 gap-2 py-4 border-y border-outline-variant/30 mb-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">bolt</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Hybrid e:HEV</p>
+</div>
+<div class="text-center border-x border-outline-variant/30">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">verified_user</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Honda Sensing</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">grid_view</span>
+<p class="text-[10px] text-on-surface-variant mt-1">CVT</p>
+</div>
+</div>
+<button class="w-full bg-secondary py-4 rounded-xl text-on-secondary font-bold flex justify-center items-center gap-2 hover:opacity-90">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Cek Ketersediaan
+                            </button>
+</div>
+</div>
+<!-- Car Card 3 -->
+<div class="bg-white rounded-2xl overflow-hidden premium-shadow group transition-transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, sleek white high-end SUV showcased in a bright studio environment. The car is angled toward the viewer, showing off its modern lines and large alloy wheels. High-key lighting creates a sense of luxury and purity. The environment is impeccably clean, reinforcing the premium consultant branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDePyBvyGv3BXF8CjcYOkpSd8jylOo1Q2V7B6iW9wZ-NjNIa0xktooSOSHY8lUZX0AxQAO-jifME9dZCENHk9bfPIQ1tviE98otCvuL2wfXFX7exwg0flOPMn1HgZePkED3sgq0Ts8fQAzHbIdamDCynEq07Rvx9oATGgt0t6lAZhL9bxK5SINSzbV-_HAuXB8UwdT4cA8J9GmgR7eh9p4Fa16_gj98YwB2EO9eIXHHRUJpbt6XWSEeuBPzfSSEwXuatDY7BZvkvTE"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Hyundai Palisade</h3>
+<p class="font-label-caps text-primary text-[14px] mb-4">MULAI DARI <span class="font-bold">Rp 880.000.000</span></p>
+<div class="grid grid-cols-3 gap-2 py-4 border-y border-outline-variant/30 mb-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">airline_seat_recline_extra</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Premium 7 Seat</p>
+</div>
+<div class="text-center border-x border-outline-variant/30">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">calendar_month</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Model 2024</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">security</span>
+<p class="text-[10px] text-on-surface-variant mt-1">SmartSense</p>
+</div>
+</div>
+<button class="w-full bg-secondary py-4 rounded-xl text-on-secondary font-bold flex justify-center items-center gap-2 hover:opacity-90">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Cek Ketersediaan
+                            </button>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="border-2 border-primary text-primary px-12 py-4 rounded-xl font-bold hover:bg-primary hover:text-on-primary transition-all">
+                        Eksplorasi Semua Unit
+                    </button>
+</div>
+</div>
+</section>
+<!-- 4. Promo Eksklusif -->
+<section class="py-section-gap-desktop bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-display-lg text-display-lg text-primary mb-12">Promo Eksklusif</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 group hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-primary">
+<span class="material-symbols-outlined text-[32px]">percent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Bunga 0%</h3>
+<p class="font-body-md text-body-md opacity-80 mb-6">Nikmati fasilitas cicilan dengan bunga 0% hingga tenor 12 bulan untuk unit pilihan.</p>
+<a class="font-bold flex items-center gap-2 group-hover:text-secondary" href="#">Ambil Promo <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 group hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-primary">
+<span class="material-symbols-outlined text-[32px]">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">DP Ringan 10%</h3>
+<p class="font-body-md text-body-md opacity-80 mb-6">Miliki mobil impian lebih cepat dengan penawaran uang muka mulai dari 10% saja.</p>
+<a class="font-bold flex items-center gap-2 group-hover:text-secondary" href="#">Ambil Promo <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 group hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-primary">
+<span class="material-symbols-outlined text-[32px]">construction</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Free Maintenance</h3>
+<p class="font-body-md text-body-md opacity-80 mb-6">Gratis biaya servis berkala dan suku cadang hingga 2 tahun atau 40.000 KM.</p>
+<a class="font-bold flex items-center gap-2 group-hover:text-secondary" href="#">Ambil Promo <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Simulasi Kredit -->
+<section class="py-section-gap-desktop bg-primary text-on-primary relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+<div>
+<h2 class="font-display-lg text-display-lg mb-6">Simulasi Kredit Pintar</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-10">Rencanakan keuangan Anda dengan matang. Sesuaikan besaran uang muka dan tenor sesuai kenyamanan finansial Anda.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<p class="font-label-caps opacity-60 mb-1">ESTIMASI CICILAN</p>
+<p class="font-display-lg text-display-lg text-secondary-fixed">Rp 12,5jt<span class="text-body-md font-normal opacity-60">/bln</span></p>
+</div>
+<div>
+<p class="font-label-caps opacity-60 mb-1">TOTAL DP</p>
+<p class="font-display-lg text-display-lg text-on-primary">Rp 150jt</p>
+</div>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-lg p-10 rounded-3xl border border-white/10">
+<div class="space-y-10">
+<div>
+<div class="flex justify-between mb-4">
+<label class="font-body-md font-semibold">Uang Muka (DP)</label>
+<span class="font-bold text-secondary-fixed">25%</span>
+</div>
+<input class="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-secondary-fixed" type="range"/>
+</div>
+<div>
+<div class="flex justify-between mb-4">
+<label class="font-body-md font-semibold">Tenor (Tahun)</label>
+<span class="font-bold text-secondary-fixed">5 Tahun</span>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="py-2 rounded-lg border border-white/20 hover:bg-white hover:text-primary transition-colors">1</button>
+<button class="py-2 rounded-lg border border-white/20 hover:bg-white hover:text-primary transition-colors">2</button>
+<button class="py-2 rounded-lg border border-white/20 hover:bg-white hover:text-primary transition-colors">3</button>
+<button class="py-2 rounded-lg border border-white/20 hover:bg-white hover:text-primary transition-colors">4</button>
+<button class="py-2 rounded-lg bg-white text-primary font-bold">5</button>
+</div>
+</div>
+<button class="w-full bg-secondary-fixed text-primary py-5 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-transform">
+                            Hubungi Konsultan Sekarang
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 -z-0 opacity-10">
+
+</div>
+</section>
+<!-- 6. Trade-In Program -->
+<section class="py-section-gap-desktop bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-stack-lg">
+<div class="max-w-2xl">
+<span class="font-label-caps text-secondary mb-4 block">UPGRADE YOUR DRIVE</span>
+<h2 class="font-display-lg text-display-lg text-primary">Tukar Tambah Unit Lama Anda</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Proses transparan, harga kompetitif, dan langsung upgrade ke unit premium impian Anda hari ini.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="relative text-center">
+<div class="w-20 h-20 bg-white premium-shadow border border-outline-variant/30 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-display-lg">1</div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Inspeksi Profesional</h4>
+<p class="font-body-md text-on-surface-variant">Tim ahli kami akan melakukan pengecekan menyeluruh pada 150+ titik kendaraan Anda.</p>
+</div>
+<div class="relative text-center">
+<div class="w-20 h-20 bg-white premium-shadow border border-outline-variant/30 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-display-lg">2</div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Penawaran Terbaik</h4>
+<p class="font-body-md text-on-surface-variant">Dapatkan harga penawaran pasar tertinggi berdasarkan kondisi aktual kendaraan lama Anda.</p>
+</div>
+<div class="relative text-center">
+<div class="w-20 h-20 bg-white premium-shadow border border-outline-variant/30 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-display-lg">3</div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Pilih Unit Baru</h4>
+<p class="font-body-md text-on-surface-variant">Potongan harga langsung untuk unit baru pilihan Anda dan bawa pulang segera.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Review Pelanggan -->
+<section class="py-section-gap-desktop bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Kisah Kepuasan Pelanggan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Lebih dari 500+ unit terjual dengan layanan personal yang memuaskan.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 premium-shadow">
+<div class="flex text-secondary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-primary mb-8">"Layanan yang sangat profesional. Tim Velocity membantu saya mendapatkan Range Rover dengan harga dan skema kredit yang sangat bersaing. Sangat recommended!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A profile headshot of a successful middle-aged Indonesian businessman, smiling confidently. He is dressed in business casual attire with a blurred corporate background. High-quality lighting highlights a sense of professional success and satisfaction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPw2lk84YUoghmB5KpiS3LPd_tdweX0sEniKiVy_g-Te6Wca14qRsWOc-fWTw8hkftORz4LUJ5oVUg0PZRPHdKmfdXE1t09i-vl6CZ6itVQPx5FywM6OXHuwAk5cR3lP8kydmowXUij0hL1SEUU1ih8VHPXFv-7X36oiF2x4GIUMeAps0zn6eYr_WGW3dzcVxJgzRfeun2ImLB6IGPe8BBz9L3h6OKVVbMXewhuzlF7ZpfMJSTt0KCIS0VbE38jhPzHC0ZzTXcDaw"/>
+</div>
+<div>
+<h5 class="font-bold text-primary">Anindya Bakri</h5>
+<p class="text-xs text-on-surface-variant">Jakarta Selatan</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 premium-shadow">
+<div class="flex text-secondary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-primary mb-8">"Proses tukar tambah di sini sangat transparan. Mobil lama saya dihargai sangat fair, dan proses administrasi unit baru sangat cepat. Terima kasih Velocity!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a cheerful Indonesian professional woman in her 30s. She is smiling warmly towards the camera, suggesting trust and happiness. The lighting is clean, bright, and modern, fitting the light-mode premium aesthetic of the landing page." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkpTuiIuJNAJWaVDFAEId1KsLRJlyHUwbwDTpCxLykHzsEnAPBLbh1iFccHDHv1oehZ9FfQpZwu-E0yHxdKHxexHZqJlT7mVKJHBMG-udMceIrhpB3Q8am45LPBUmvG03apcR56p6iupF7wdZJ0tqRMOHtDhHHGgKXfg37QCrYiBsNMABoQjECIFhdjNBeXF_h4PzqCzAN_bo12efbcTeZNdrlgODHc3J21ORMvyCcpW_-jnuNEFTZDyog1M2VaNwZq_HRFJb58Yo"/>
+</div>
+<div>
+<h5 class="font-bold text-primary">Santi Rahayu</h5>
+<p class="text-xs text-on-surface-variant">Surabaya, Jawa Timur</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 premium-shadow">
+<div class="flex text-secondary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-primary mb-8">"Sebagai kolektor mobil, saya sangat selektif. Velocity membuktikan kualitas unit dan pelayanannya di atas standar dealer biasa. Highly impressed."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up headshot of a sophisticated Indonesian man in his 40s wearing stylish glasses and a crisp polo shirt. He exudes an aura of expertise and discerning taste. The photography style is high-end corporate lifestyle with soft natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0q1LC9rYKK_8eUYMS_1EgbRPgui3FVxnUvHrpQ9TInPNJestNLc-i6ZQ6ZYTtjiL9Q-u66B9l0J66XZTHqrC1frgDOyu3ARtmGlwLmAMKkUNKCcvOY1HMkG06LHOA9RSbU4BUTLjZbi78hrgV1a8uiHekSSNu1k1-wCvLumGZ41IYep83OMP3v3l7BpuBKjOZ0yuX0mB5rqupPGFliwIB3dh3sLviHZGYIoMCjmRHc0juG2Zpiepos-GVs3crPL0PPHLGNUl1iOI"/>
+</div>
+<div>
+<h5 class="font-bold text-primary">Dr. Gunawan</h5>
+<p class="text-xs text-on-surface-variant">Bandung, Jawa Barat</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. FAQ -->
+<section class="py-section-gap-desktop bg-surface">
+<div class="max-w-[800px] mx-auto px-gutter">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 text-center">Pertanyaan Umum (FAQ)</h2>
+<div class="space-y-4">
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-primary list-none">
+                            Apakah mobil yang dijual bergaransi?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                            Ya, seluruh unit yang kami tawarkan telah melalui inspeksi ketat dan dilengkapi dengan garansi mesin serta transmisi hingga 1 tahun. Kami juga menyediakan opsi perpanjangan garansi sesuai kebutuhan Anda.
+                        </div>
+</details>
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-primary list-none">
+                            Bagaimana proses pengiriman unit ke luar kota?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                            Kami melayani pengiriman ke seluruh wilayah Indonesia menggunakan layanan towing premium berasuransi untuk memastikan mobil impian Anda sampai di depan rumah dengan kondisi sempurna.
+                        </div>
+</details>
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-primary list-none">
+                            Bisakah saya melakukan test drive di rumah?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                            Tentu! Kami menyediakan layanan 'Home Test Drive' untuk wilayah Jabodetabek. Tim konsultan kami akan membawa unit pilihan Anda ke lokasi Anda untuk dicoba secara langsung dengan protokol kenyamanan tinggi.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- 9. Final CTA -->
+<section class="py-section-gap-desktop bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-primary rounded-[40px] p-12 md:p-24 text-center text-on-primary relative overflow-hidden premium-shadow">
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg mb-6">Siap Memiliki Mobil Impian?</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-12 max-w-2xl mx-auto">Konsultasikan kebutuhan otomotif Anda sekarang dengan tim ahli kami secara gratis via WhatsApp.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-secondary text-on-secondary px-12 py-5 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 scale-100 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Hubungi Sales Sekarang
+                            </button>
+<button class="bg-white/10 backdrop-blur-md text-on-primary border border-white/20 px-12 py-5 rounded-2xl font-bold text-xl hover:bg-white hover:text-primary transition-all">
+                                Lihat Katalog Digital
+                            </button>
+</div>
+</div>
+<!-- Subtle pattern background for the CTA banner -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="dots" patternunits="userSpaceOnUse" width="40" x="0" y="0">
+<circle cx="2" cy="2" fill="currentColor" r="2"></circle>
+</pattern>
+</defs>
+<rect fill="url(#dots)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 10. Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter py-section-gap-desktop max-w-container-max mx-auto">
+<div class="col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mb-6">VELOCITY</div>
+<p class="font-body-md text-on-primary/70 mb-8 max-w-xs">Konsultan otomotif premium terpercaya untuk pengalaman transaksi mobil yang aman, nyaman, dan personal.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-lg mb-6">Navigasi</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Beranda</a></li>
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Koleksi Mobil</a></li>
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Penawaran Promo</a></li>
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Simulasi Kredit</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-lg mb-6">Perusahaan</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Tentang Kami</a></li>
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Kebijakan Privasi</a></li>
+<li><a class="font-body-md text-on-primary/70 hover:text-on-primary transition-colors hover:underline" href="#">Hubungi Kami</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-lg mb-6">Kantor Pusat</h4>
+<p class="font-body-md text-on-primary/70 mb-4">Sudirman Central Business District (SCBD), Jakarta Selatan 12190</p>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">call</span>
+<span class="font-body-md text-on-primary/70">(021) 555-0123</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">mail</span>
+<span class="font-body-md text-on-primary/70">hello@velocityauto.id</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-container-max mx-auto px-gutter text-center font-body-md text-on-primary/50">
+                © 2024 Velocity Auto Consultant. All Rights Reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('bg-white/80');
+                nav.classList.add('bg-white/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('bg-white/80');
+                nav.classList.remove('bg-white/95');
+            }
+        });
+    </script>
+</body></html>

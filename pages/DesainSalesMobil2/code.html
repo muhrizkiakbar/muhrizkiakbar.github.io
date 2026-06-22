@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prime Auto Indonesia | Sales Consultant Profesional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c4ff",
+                    "surface-container-highest": "#d9e3f7",
+                    "primary-fixed-variant": "#0039b5",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container": "#e6eeff",
+                    "primary-fixed": "#dce1ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#dfe9fc",
+                    "outline-variant": "#c4c5d7",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d0daee",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "on-tertiary-fixed-variant": "#783201",
+                    "primary-container": "#0037b0",
+                    "surface": "#f8f9ff",
+                    "primary": "#00247d",
+                    "tertiary": "#521f00",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-primary": "#b7c4ff",
+                    "surface-variant": "#d9e3f7",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "surface-tint": "#2f54cb",
+                    "brand-cta": "#FF8A00",
+                    "outline": "#747685",
+                    "tertiary-fixed": "#ffdbcb",
+                    "inverse-surface": "#273140",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#341100",
+                    "on-secondary-fixed": "#001551",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-container": "#4069f2",
+                    "on-background": "#121c2a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#1d4ed8",
+                    "surface-container-low": "#eff3ff",
+                    "on-surface-variant": "#434655",
+                    "on-primary-fixed": "#001551",
+                    "on-secondary-fixed-variant": "#0039b5",
+                    "on-tertiary-container": "#fd9963",
+                    "on-primary-fixed-variant": "#063ab2",
+                    "on-surface": "#121c2a",
+                    "secondary-fixed": "#dce1ff",
+                    "on-error-container": "#93000a",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#753000",
+                    "on-primary-container": "#9baeff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap-mobile": "48px",
+                    "stack-lg": "32px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "price-display": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-sm": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "price-display": ["22px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .car-card-interactive {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .car-card-interactive:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+        }
+        .cta-pulse {
+            animation: pulse-orange 2s infinite;
+        }
+        @keyframes pulse-orange {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.5); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .section-header-accent {
+            position: relative;
+            display: inline-block;
+        }
+        .section-header-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #FF8A00;
+            border-radius: 2px;
+        }
+        .glass-dark {
+            background: rgba(0, 36, 125, 0.05);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-primary">
+<!-- Navigation -->
+<header class="bg-white/90 backdrop-blur-md border-b border-outline-variant shadow-sm sticky top-0 z-50 transition-all duration-300">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl">P</div>
+<div class="text-headline-sm font-bold text-primary">Prime Auto</div>
+</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<div class="flex gap-8 items-center mr-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#katalog">Katalog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#promo">Promo</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#simulasi">Simulasi</a>
+</div>
+<div class="flex gap-stack-md">
+<a class="px-6 py-2.5 bg-brand-cta text-white rounded-full font-label-bold flex items-center gap-2 hover:brightness-110 transition-all shadow-lg shadow-brand-cta/20" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                    Hubungi Admin
+                </a>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 md:pt-28 md:pb-32 overflow-hidden bg-gradient-to-br from-surface-bright via-surface to-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-label-bold mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Sales Consultant Berpengalaman
+                </div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-[1.1]">
+                    Dapatkan Mobil Impian Anda dengan <span class="text-primary italic">Penawaran Terbaik</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto lg:mx-0">
+                    Proses cepat, data dibantu hingga approve, dan bonus aksesoris melimpah khusus pemesanan bulan ini. Bergabunglah dengan 500+ pelanggan puas.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<a class="px-10 py-5 bg-brand-cta text-white rounded-2xl font-headline-sm text-[20px] flex items-center justify-center gap-3 cta-pulse hover:scale-105 transition-transform shadow-xl shadow-brand-cta/30" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Konsultasi Gratis
+                    </a>
+<a class="px-10 py-5 bg-white border-2 border-primary/20 text-primary rounded-2xl font-headline-sm text-[20px] flex items-center justify-center gap-3 hover:bg-primary-fixed/30 transition-all" href="#katalog">
+                        Lihat Katalog
+                    </a>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="absolute -right-20 -top-20 w-[120%] h-[120%] bg-primary-fixed/30 rounded-full blur-[120px]"></div>
+<div class="relative z-10 group">
+<div class="bg-white p-4 rounded-[40px] shadow-2xl border border-white/50 rotate-2 transition-transform duration-500 group-hover:rotate-0">
+<div class="rounded-[30px] overflow-hidden aspect-[4/5] relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional Indonesian male sales consultant" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzqVAhj3CY15HB3-VoFKFD3g1I7mFKTSBcAl-XVMh_tv-DRyoH-HyHA2pMPt9sNcpo-MoPIXTgvWkZIfbSZhznq47RKKuTgSehqpgE8z9l0bbsvUB3WhGIbJir3fp-NhID5WwToidoiSHsVb9DmP5h5n562FQhjYAbxbQb71CfaFKkOp-SmpHr3dW9vVb8C3v6v20jLszyRYP8Fhow0Si1WNuUrjTO9bq8vqgZFoTgoprg0-rnXYDLv5W0VBBFaojdQIRsjmEZlHI')"></div>
+</div>
+</div>
+<!-- Floating Stat -->
+<div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-2xl border border-outline-variant z-20 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-4 border-white bg-secondary-fixed"></div>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-primary-fixed"></div>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-tertiary-fixed"></div>
+</div>
+<div>
+<p class="text-display-lg-mobile font-bold text-primary leading-none">500+</p>
+<p class="text-label-bold text-on-surface-variant">Pelanggan Puas</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive USP -->
+<section class="py-20 bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group p-8 rounded-3xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+<span class="material-symbols-outlined text-white text-4xl">speed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3 group-hover:text-white transition-colors">Proses Kilat</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 transition-colors">Persetujuan kredit hanya hitungan hari, gak pakai ribet.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+<span class="material-symbols-outlined text-white text-4xl">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3 group-hover:text-white transition-colors">Pasti Approve</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 transition-colors">Data Anda kami kawal sampai unit mendarat di garasi.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+<span class="material-symbols-outlined text-white text-4xl">featured_seasonal_and_gifts</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3 group-hover:text-white transition-colors">Banyak Hadiah</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 transition-colors">Banjir bonus aksesoris dan merchandise eksklusif.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+<span class="material-symbols-outlined text-white text-4xl">currency_exchange</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3 group-hover:text-white transition-colors">Tukar Tambah</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 transition-colors">Mobil lama Anda kami tawar dengan harga tertinggi.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog Section -->
+<section class="py-20 bg-surface-container-lowest" id="katalog">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-on-surface section-header-accent">Katalog Pilihan</h2>
+<p class="text-body-lg text-on-surface-variant mt-6">Unit terbaik dengan kualitas terjamin.</p>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-2 pb-2">
+<button class="px-6 py-3 bg-primary text-white rounded-full font-label-bold whitespace-nowrap shadow-lg shadow-primary/20">Semua</button>
+<button class="px-6 py-3 bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-all">SUV</button>
+<button class="px-6 py-3 bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-all">MPV</button>
+<button class="px-6 py-3 bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-all">Electric</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Large Featured SUV Card -->
+<div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 bg-white rounded-[40px] overflow-hidden shadow-xl border border-outline-variant car-card-interactive">
+<div class="relative h-[300px] md:h-auto overflow-hidden">
+<div class="absolute top-6 left-6 z-10 px-4 py-2 bg-brand-cta text-white font-bold rounded-full text-sm shadow-lg">READY STOCK</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQGgRJ1pFkBxlvyH68Sf4AlxhfXVnI9RfAZYVGFK8GwE0ov77d99xsS3h8Lsb54bydhwPG0ywnvP7tu_P8FpKsS0AjxQbEXD0KufVOo3D3c3bp2M66zaRFRyYCtutuiPaElqCqk1FQo6p6REaDkaw-C1QkonGyShTBOgZD5liBCosEIqNBx8CJEjv5a3EWENz8h1xqm82ALyRMKTMQKrlODOZ0HN80MaOK08bPVugqFgo3Ke8_cRIRIsYi3AzdtmB9MpFVn7l0BOc')"></div>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<span class="text-primary font-label-bold mb-2 block">Highlight Bulan Ini</span>
+<h3 class="font-display-lg text-headline-md md:text-display-lg mb-4">Toyota Fortuner 2024</h3>
+<div class="flex gap-6 mb-8 text-on-surface-variant">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">settings</span> <span>Automatic</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">local_gas_station</span> <span>Diesel</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">groups</span> <span>7 Seats</span></div>
+</div>
+<div class="mb-10 bg-surface-container-low p-6 rounded-3xl">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-sm text-on-surface-variant font-bold mb-1">Mulai Dari</p>
+<p class="text-price-display text-primary font-bold">Rp 560.200.000</p>
+</div>
+<div class="text-right">
+<p class="text-sm text-on-surface-variant mb-1">Angsuran</p>
+<p class="text-headline-sm text-tertiary-container font-bold">8.5 Jt / bln</p>
+</div>
+</div>
+</div>
+<a class="w-full py-5 bg-brand-cta text-white rounded-2xl font-headline-sm text-center flex items-center justify-center gap-3 hover:brightness-110 transition-all shadow-lg shadow-brand-cta/30" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Dapatkan Penawaran Eksklusif
+                        </a>
+</div>
+</div>
+<!-- Regular Cards -->
+<div class="bg-white rounded-[32px] overflow-hidden shadow-lg border border-outline-variant car-card-interactive flex flex-col">
+<div class="relative h-64">
+<div class="absolute top-4 left-4 z-10 px-3 py-1.5 bg-primary text-white font-bold rounded-lg text-xs">BEST SELLER</div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7QXsQHHoMyx2jqX00gAcd4Uc16Bk31okS33R71NExfc0peUgxTJ_qq-Fi2w83Pb87fyzZ_XpMHOpguiCEYaunF3HHh64l-26C4wAu3_RCfwBYmnOCcCYtHtCCIwrhlZArz5W694QkA9X360Th7huZ0-3pu_j2ICF8GGk04lQuR1KjGf2qQkku_A7efGqBclJuzJA4cG3e2P9NDBS5R9ZOAh1PwskQDFXrPG8KmAdnsLn_vHVsTdGF6RVHOYl9hwosxoqIrm03RSo')"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-headline-sm text-headline-sm mb-4">Mitsubishi Pajero Sport</h4>
+<div class="flex gap-4 text-sm text-on-surface-variant mb-6 pb-6 border-b border-outline-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">settings</span> Matic</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">local_gas_station</span> Diesel</span>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-xs text-on-surface-variant font-bold">Harga</p>
+<p class="text-xl font-bold text-primary">Rp 577 Jt-an</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-on-surface-variant font-bold">Angsuran</p>
+<p class="text-lg font-bold text-tertiary-container">9.1 Jt/bln</p>
+</div>
+</div>
+<a class="w-full py-4 bg-white border-2 border-brand-cta text-brand-cta rounded-xl font-label-bold flex items-center justify-center gap-2 hover:bg-brand-cta hover:text-white transition-all" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Tanya Promo
+                            </a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-[32px] overflow-hidden shadow-lg border border-outline-variant car-card-interactive flex flex-col">
+<div class="relative h-64">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaQplzi6nh8TI2iNOhH8wQ3HRBxQMHaH3q5bvgzjTIYqkCJOV4buMSKXlSArb-RCaji2ga9R3LCoiIz3wIGasaDjDbPTJwAAKOg9KfeoxrLZx4lorhxwmctejjajRGwy_RN9GZu4QWCKlWVrhEgUFzUBtGikz2r0urKsqnJN_OISXo8Qv-xQvf--jD9RJcfRfnS7B2zUa6xDtk91hKNoIY0-9F1SlnzjY99g6-Vp7_sahgxKcEavghsZL92ZjfMtJquA04ZP_fH8M')"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-headline-sm text-headline-sm mb-4">Honda CR-V Hybrid</h4>
+<div class="flex gap-4 text-sm text-on-surface-variant mb-6 pb-6 border-b border-outline-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bolt</span> Electric</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">local_gas_station</span> Bensin</span>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-xs text-on-surface-variant font-bold">Harga</p>
+<p class="text-xl font-bold text-primary">Rp 739 Jt-an</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-on-surface-variant font-bold">Angsuran</p>
+<p class="text-lg font-bold text-tertiary-container">11.2 Jt/bln</p>
+</div>
+</div>
+<a class="w-full py-4 bg-white border-2 border-brand-cta text-brand-cta rounded-xl font-label-bold flex items-center justify-center gap-2 hover:bg-brand-cta hover:text-white transition-all" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                                Tanya Promo
+                            </a>
+</div>
+</div>
+</div>
+<!-- Teaser Cards -->
+<div class="bg-primary rounded-[32px] overflow-hidden shadow-lg border border-primary/20 car-card-interactive flex flex-col relative group">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-110 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdrHbM6xJxwzH_lPBMKQF6C9zVFEnf1_iRfwZP_FKWhHH0ek4satiyHiFRuJ_Hs8x5R7uem-q4jH95V7uGQ0BumEr6S2_WekCRXukXMTfpHlyI8BhvpjSkCNXfMD5jgEiSjVtIwhTnjvdJx0CChoSLi5MHsbW2_QUWf-ue8jg5XnHKTZ33kK6tqPexVFSIhDBlfUWDhdK4sAiVEWsk5-y_MfoAemMECf5UUL8YCcvlOinukLzJFxKPzf72hIY-nMLStcOrdc2PMEM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+<div class="p-8 mt-auto relative z-10 text-white">
+<h4 class="font-headline-sm text-headline-sm mb-2">Luxury MPV</h4>
+<p class="text-sm opacity-80 mb-6">Nikmati kenyamanan berkelas premium untuk seluruh keluarga.</p>
+<a class="inline-flex items-center gap-2 text-white font-bold group" href="#">
+                            Lihat Semua <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promo Section (More Prominent) -->
+<section class="py-24 bg-primary relative overflow-hidden" id="promo">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container/20 -skew-x-12 translate-x-1/4"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="text-white">
+<div class="inline-block px-4 py-1.5 bg-brand-cta text-white font-bold rounded-lg text-sm mb-6 uppercase tracking-wider">Super Deal Bulan Ini</div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-tight">
+                        Bunga 0% &amp; <span class="text-brand-cta">Bebas Biaya</span> Servis 4 Tahun
+                    </h2>
+<div class="space-y-6 mb-10">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-brand-cta">check_circle</span>
+</div>
+<p class="text-body-lg opacity-90">DP Ringan mulai dari 10% untuk semua unit ready stock.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-brand-cta">check_circle</span>
+</div>
+<p class="text-body-lg opacity-90">Gratis Kaca Film V-Kool &amp; Karpet Premium Original.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-brand-cta">check_circle</span>
+</div>
+<p class="text-body-lg opacity-90">Voucher BBM Rp 2 Juta &amp; Layanan Darurat 24 Jam.</p>
+</div>
+</div>
+<a class="inline-flex px-12 py-5 bg-brand-cta text-white rounded-2xl font-headline-sm text-[22px] hover:scale-105 transition-transform shadow-2xl shadow-black/20 cta-pulse" href="https://wa.me/628123456789">
+                        Klaim Promo Sekarang
+                    </a>
+</div>
+<div>
+<div class="bg-white p-10 md:p-14 rounded-[48px] shadow-3xl text-on-surface relative">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-brand-cta rounded-full flex items-center justify-center text-white font-bold text-center leading-tight shadow-xl -rotate-12">
+                            STOK<br/>LIMIT!
+                        </div>
+<h3 class="text-headline-md font-bold text-center mb-8">Kuota Sisa Promo</h3>
+<div class="text-center mb-10">
+<div class="text-[80px] md:text-[100px] font-display-lg text-primary leading-none">04</div>
+<p class="text-on-surface-variant font-bold tracking-widest uppercase">Unit Tersedia</p>
+</div>
+<div class="w-full h-4 bg-surface-container-high rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary w-[80%] rounded-full relative">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+<p class="text-center text-on-surface-variant text-sm font-medium italic">Jangan sampai kehabisan, hubungi kami sekarang juga!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Credit Simulation (Enhanced Prominence) -->
+<section class="py-24 bg-surface-container-low" id="simulasi">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-md md:text-display-lg section-header-accent mx-auto">Simulasi Kredit</h2>
+<p class="text-body-lg text-on-surface-variant mt-6 max-w-2xl mx-auto">Rencanakan kepemilikan mobil Anda dengan simulasi yang akurat. Kami bekerja sama dengan leasing terpercaya.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-[40px] shadow-xl border border-outline-variant">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="md:col-span-2">
+<label class="block font-label-bold text-primary mb-3">Harga Mobil (OTR)</label>
+<div class="relative">
+<span class="absolute left-5 top-1/2 -translate-y-1/2 text-on-surface-variant font-bold">Rp</span>
+<input class="w-full pl-14 pr-6 py-4 rounded-2xl border-2 border-surface-container-high focus:border-primary focus:ring-0 outline-none transition-all text-lg font-bold" placeholder="500,000,000" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-primary mb-3">Uang Muka (DP %)</label>
+<select class="w-full px-6 py-4 rounded-2xl border-2 border-surface-container-high focus:border-primary focus:ring-0 outline-none transition-all text-lg font-medium appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_1.5rem_center] bg-no-repeat">
+<option>10%</option>
+<option>15%</option>
+<option selected="">20%</option>
+<option>30%</option>
+</select>
+</div>
+<div>
+<label class="block font-label-bold text-primary mb-3">Tenor (Tahun)</label>
+<select class="w-full px-6 py-4 rounded-2xl border-2 border-surface-container-high focus:border-primary focus:ring-0 outline-none transition-all text-lg font-medium appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_1.5rem_center] bg-no-repeat">
+<option>1 Tahun</option>
+<option>2 Tahun</option>
+<option selected="">3 Tahun</option>
+<option>4 Tahun</option>
+<option>5 Tahun</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<button class="w-full py-5 bg-primary text-white rounded-2xl font-headline-sm text-xl hover:brightness-110 transition-all shadow-xl shadow-primary/20">Hitung Sekarang</button>
+</div>
+</form>
+</div>
+<div class="lg:col-span-4 h-full">
+<div class="bg-gradient-to-br from-primary to-primary-container p-10 rounded-[40px] text-white h-full flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl">contact_support</span>
+</div>
+<h3 class="text-headline-sm font-bold mb-4">Butuh Simulasi Detail?</h3>
+<p class="opacity-80 mb-10 leading-relaxed">Saya akan bantu hitungkan simulasi kredit yang paling sesuai dengan budget dan profil keuangan Anda secara privat melalui WhatsApp.</p>
+</div>
+<a class="px-8 py-5 bg-white text-primary rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-surface-bright transition-all shadow-lg" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Konsultasi via WA
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-display-lg text-headline-md text-center mb-16">Kisah Sukses Pelanggan</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="p-10 bg-surface-container-lowest rounded-[32px] border border-outline-variant shadow-lg relative group hover:bg-primary transition-all duration-300">
+<div class="absolute -top-6 left-10 w-12 h-12 bg-brand-cta text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">format_quote</span>
+</div>
+<p class="text-on-surface-variant mb-10 mt-4 leading-relaxed group-hover:text-white transition-colors italic">"Luar biasa! Prosesnya benar-benar dibantu sampai approved. Salesnya ramah dan sangat transparan."</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full border-2 border-white shadow-md overflow-hidden bg-surface-variant">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtdSzmpTXa8_eqSJj6BH4loTomAMbNaXIjidbF15tZuuXhaRVy72YxdqLTvQzRj8h2ZIUvxHrwGRbUN951ez_g8Vl0HV-v1KwpFlkPCnFdiEShGVKIO1K6HIGbJo0UcNxebIaaggYhLNqe0BPrjZ2vp-dhr_-tDNpg0mcmKKMqsD9HLzMc9XYPSzz-x9-zRthq2uZkeTnFSW5606syaTpkMjlccq2kkBZW-sGzh5HpBscSx4Qn2FZacyrwTVSBb9s6Hmwy_YbYrLA')"></div>
+</div>
+<div>
+<div class="font-bold text-on-surface group-hover:text-white transition-colors">Bp. Aris Setiawan</div>
+<div class="text-xs font-bold text-primary group-hover:text-primary-fixed transition-colors">Pembeli Toyota Fortuner</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-10 bg-surface-container-lowest rounded-[32px] border border-outline-variant shadow-lg relative group hover:bg-primary transition-all duration-300">
+<div class="absolute -top-6 left-10 w-12 h-12 bg-brand-cta text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">format_quote</span>
+</div>
+<p class="text-on-surface-variant mb-10 mt-4 leading-relaxed group-hover:text-white transition-colors italic">"Bonusnya paling melimpah dibanding dealer lain. Kaca film branded dan voucher servis gratis 5 tahun. Puas!"</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full border-2 border-white shadow-md overflow-hidden bg-surface-variant">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANc6zYZMDXCbXwLZ9VtwMlbOgsHSxpt9esxVfiIo0yE57WoM8JVc7woQY_FO8iAfxvEipxT1eMjhIcj5LPEMBdEb9Fpdvc6JewdKEU90WCd-dKaWdU2dIX5_9ONr3ma3EkAVk-0qEZnPRZJPJFSNy0sxsjpTkcddYHWp9iOqR9q_QlzB8IH0vE_auQ3EOzTFLF_HmfhSXGCextnh9tymS8bTVMT-1b0DQg8vQeeHX3gcuk4Od7P3_60BvNw2ae0boS0ttd87b7hjg')"></div>
+</div>
+<div>
+<div class="font-bold text-on-surface group-hover:text-white transition-colors">Ibu Maya Sari</div>
+<div class="text-xs font-bold text-primary group-hover:text-primary-fixed transition-colors">Pembeli Hyundai Ioniq 5</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-10 bg-surface-container-lowest rounded-[32px] border border-outline-variant shadow-lg relative group hover:bg-primary transition-all duration-300">
+<div class="absolute -top-6 left-10 w-12 h-12 bg-brand-cta text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">format_quote</span>
+</div>
+<p class="text-on-surface-variant mb-10 mt-4 leading-relaxed group-hover:text-white transition-colors italic">"Trade-in mobil lama saya dihargai sangat tinggi. Langsung bisa buat DP mobil baru tanpa ribet. Mantap!"</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full border-2 border-white shadow-md overflow-hidden bg-surface-variant">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0R-DhHwE-mbnuL7Db3UJQlO2KJk5P4SPhfbFL9oP8GjCEx2p4xryO2zZfGtHCUor2VOTBjJr_hI0ziTpo_U4o4xva1lFdqhrvysA9YK4zrWy6i_lm3eVz649-U1EJqNHAJ6bGFnoGwIYo0yKCFoWSI7b0h5y5eZ1_7zG7eF4alRazs8dsf5Dy97-39tJKmLT_NBZ247TqEU0cEx_hxIQ7ZR1xkhly2W8_Mw-222fxkhfOm4K4np-g95dtcgziGRrllVy-u9TjQuo')"></div>
+</div>
+<div>
+<div class="font-bold text-on-surface group-hover:text-white transition-colors">Bp. Hendra</div>
+<div class="text-xs font-bold text-primary group-hover:text-primary-fixed transition-colors">Pembeli Mitsubishi Xpander</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-3xl mx-auto px-gutter">
+<h2 class="font-display-lg text-headline-md text-center mb-12">Pertanyaan Umum</h2>
+<div class="space-y-6">
+<details class="group bg-white p-8 rounded-3xl shadow-md cursor-pointer open:shadow-xl transition-all border border-outline-variant">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none text-lg">
+                        Apa saja syarat pengajuan kredit?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-primary font-bold">expand_more</span>
+</summary>
+<p class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant pt-6">KTP Suami/Istri, Kartu Keluarga, NPWP, Slip Gaji 3 bulan terakhir, dan Rekening Koran. Tenang saja, data akan saya bantu optimasi agar lolos BI Checking dengan mudah.</p>
+</details>
+<details class="group bg-white p-8 rounded-3xl shadow-md cursor-pointer open:shadow-xl transition-all border border-outline-variant">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none text-lg">
+                        Apakah bisa tukar tambah mobil lama?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-primary font-bold">expand_more</span>
+</summary>
+<p class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant pt-6">Tentu saja! Kami menerima tukar tambah segala merk dengan penawaran harga terbaik. Tim appraisal kami akan datang ke rumah Anda untuk pengecekan unit secara gratis.</p>
+</details>
+<details class="group bg-white p-8 rounded-3xl shadow-md cursor-pointer open:shadow-xl transition-all border border-outline-variant">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none text-lg">
+                        Berapa lama proses pengiriman unit?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-primary font-bold">expand_more</span>
+</summary>
+<p class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant pt-6">Untuk unit yang Ready Stock, proses kredit hingga STNK (plat sementara) keluar dan unit dikirim ke rumah biasanya memakan waktu 3-7 hari kerja saja.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-surface relative overflow-hidden text-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-fixed/20 rounded-full blur-[150px]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-tight">Siap Memiliki Mobil Baru <span class="text-primary italic">Hari Ini?</span></h2>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Jangan tunda impian Anda. Promo bunga 0% dan bonus melimpah hanya berlaku sampai akhir bulan ini. Hubungi saya sekarang!</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a class="px-12 py-6 bg-brand-cta text-white rounded-2xl font-headline-sm text-2xl flex items-center gap-4 cta-pulse hover:scale-110 transition-transform shadow-2xl shadow-brand-cta/40" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+                    Hubungi Saya Sekarang
+                </a>
+<div class="flex items-center gap-4 px-8 py-4 bg-white rounded-2xl border border-outline-variant shadow-lg">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">phone_in_talk</span>
+</div>
+<div class="text-left">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Telepon Langsung</p>
+<p class="text-xl font-bold text-on-surface">0812-3456-7890</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary text-white pt-20">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-12 pb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary font-bold text-xl">P</div>
+<div class="text-headline-sm font-bold">Prime Auto Indonesia</div>
+</div>
+<p class="text-white/70 max-w-sm mb-8 leading-relaxed">Konsultan penjualan mobil profesional dengan pengalaman lebih dari 10 tahun melayani pelanggan di seluruh Indonesia dengan kejujuran dan layanan prima.</p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-2xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-white">public</span></a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-white">alternate_email</span></a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-white">share_reviews</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-8">Eksplorasi</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors" href="#katalog">Katalog SUV</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors" href="#katalog">Katalog MPV</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors" href="#promo">Promo Spesial</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors" href="#simulasi">Simulasi Kredit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-8">Informasi</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors" href="#">Testimoni</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors" href="#">Pusat Bantuan</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 text-center text-white/50 text-sm">
+        © 2024 Prime Auto Indonesia. Professional Sales Consultant Service.
+    </div>
+</footer>
+<!-- Mobile Quick Action (Action Oriented) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex md:hidden justify-between items-center px-6 py-4 bg-white/95 backdrop-blur-md shadow-[0_-10px_30px_rgba(0,0,0,0.1)] border-t border-outline-variant">
+<div class="flex gap-8">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#katalog">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="text-[10px] font-bold mt-1 uppercase">Unit</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#promo">
+<span class="material-symbols-outlined">sell</span>
+<span class="text-[10px] font-bold mt-1 uppercase">Promo</span>
+</a>
+</div>
+<a class="bg-brand-cta text-white rounded-2xl px-8 py-3 flex items-center gap-2 font-bold shadow-lg shadow-brand-cta/30" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+        Konsultasi
+    </a>
+</nav>
+<!-- Desktop Floating Action Button -->
+<a class="hidden md:flex fixed bottom-10 right-10 z-[60] bg-brand-cta text-white p-5 rounded-full shadow-2xl items-center gap-3 group hover:pr-10 transition-all duration-300 cta-pulse" href="https://wa.me/628123456789">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-bold whitespace-nowrap text-lg">Hubungi Sales</span>
+</a>
+<script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === "#") return;
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Header scroll interaction
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('py-0');
+            header.classList.add('shadow-xl');
+        } else {
+            header.classList.remove('py-0');
+            header.classList.remove('shadow-xl');
+        }
+    });
+</script>
+</body></html>
